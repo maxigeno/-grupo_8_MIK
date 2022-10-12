@@ -30,6 +30,10 @@ Compensar es una caja de compensación colombiana la cual consiste en una empres
 
 Crehana es una pagina que ofrece cursos virtuales en una gran variedad de disciplinas dirigidos hacia cualquier persona que desee aprender de un tema en especifico. En esta plataforma tu puedes comprar un curso o pagar una anualidad para acceder a todos los cursos que desees. Su objetivo principal es transformar la vida de la personas a traves de la educación y puedan mejorar su calidad de vida.
 
+## https://www.mercadolibre.com.ar/
+
+Mercado Libre es uno de los E-commerces mas conocidos de latinoamérica, no hay mucho que contar sobre esta plataforma, la pusimos como inspiración ya que nos gusta lo intuitiva que es su interfaz y lo simple que es su diseño.
+
 <<<<<<< HEAD
 MIK es un e-commerce dirigido a todo tipo de público, básicamente lo que ofrecemos es una plataforma que conecta a personas y emprendedores que proveen servicios con gente que busca y necesita estos servicios, con gran variedad de cursos, clases y actividades tanto presenciales como virtuales para elegir. Es tan simple como decidir lo que quieras hacer, seleccionar horarios, modalidad y una vez procesado el pago, LISTO, a disfrutar!!.
 
