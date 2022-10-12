@@ -1,10 +1,8 @@
-# -grupo_8_MIK
-
-# <<<<<<< HEAD
+# grupo_8_MIK
 
 MIK es un e-commerce dirigido a todo tipo de público, básicamente lo que ofrecemos es una plataforma que conecta a personas y emprendedores que proveen servicios con gente que busca y necesita estos servicios. Contamos con una gran variedad de cursos, clases y actividades tanto presenciales como virtuales para elegir. Es tan simple como decidir lo que quieras hacer, seleccionar horarios, modalidad y una vez procesado el pago, LISTO, a disfrutar!!.
 
-> > > > > > > 6ee74396bcf3a213cee61036c45a31847ef0c68f
+> > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > >
 
 # Integrantes del equipo
 
@@ -34,9 +32,8 @@ Crehana es una pagina que ofrece cursos virtuales en una gran variedad de discip
 
 Mercado Libre es uno de los E-commerces mas conocidos de latinoamérica, no hay mucho que contar sobre esta plataforma, la pusimos como inspiración ya que nos gusta lo intuitiva que es su interfaz y lo simple que es su diseño.
 
-<<<<<<< HEAD
-MIK es un e-commerce dirigido a todo tipo de público, básicamente lo que ofrecemos es una plataforma que conecta a personas y emprendedores que proveen servicios con gente que busca y necesita estos servicios, con gran variedad de cursos, clases y actividades tanto presenciales como virtuales para elegir. Es tan simple como decidir lo que quieras hacer, seleccionar horarios, modalidad y una vez procesado el pago, LISTO, a disfrutar!!.
+## https://www.udemy.com/
 
-=======
+Udemy es una plataforma de aprendizaje en línea. Está dirigido a adultos profesionales o aficionados. ​Lo que nos gusto de esta plataforma es que utiliza contenido de creadores en línea, los cuales pueden vender y promocionar sus cursos y así conseguir ganancias.
 
-> > > > > > > 6c0deb81fc58e8f315ee3ad801d87d814928b697
+> > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > >
