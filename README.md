@@ -12,7 +12,7 @@ https://miro.com/app/board/uXjVPR0zsNE=/
 
 ## Diana Katalina Quiroga
 
-Mi nombres es Katalina Quiroga, tengo 26 años de edad y soy estudiante de Química en la Universidad Nacional de Colombia. Soy Colombiana, nací el 22 de abril de 1996 y he vivido la mayor parte de mi vida en la ciudad de Bogotá, Colombia. Soy apasionada por el Voleibol y por leer libros romanticos tanto en ingles como en español, ademas siento un amor inmenso por todos los animales y tengo en mi casa dos perros y un gato. Apenas estoy empezando a aprender programación y algunos de los conceptos que llevamos hasta el momento me han costado pero otros me han parecido mas sencillos de entender. Deseo seguir aprendiento de este tema ya que me parece muy interesante y creo que es algo que va a estar muy presente en el futuro y que va a ir avanzando cada dia mas.
+Mi nombres es Katalina Quiroga, tengo 26 años de edad y soy estudiante de Química en la Universidad Nacional de Colombia. Soy Colombiana, nací el 22 de abril de 1996 y he vivido la mayor parte de mi vida en la ciudad de Bogotá, Colombia. Soy apasionada por el Voleibol y por leer libros romanticos tanto en ingles como en español, ademas siento un amor inmenso por todos los animales y tengo en mi casa dos perros y un gato. Apenas estoy empezando a aprender programación y algunos de los conceptos que llevamos hasta el momento me han costado pero otros me han parecido mas sencillos de entender.
 
 ## Ivan
 
