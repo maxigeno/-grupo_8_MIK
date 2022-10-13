@@ -1,0 +1,23 @@
+{
+  "name": "grupo_8_mik",
+  "version": "1.0.0",
+  "description": "MIK es un e-commerce dirigido a todo tipo de público, básicamente lo que ofrecemos es una plataforma que conecta a personas y emprendedores que proveen servicios con gente que busca y necesita estos servicios. Contamos con una gran variedad de cursos, clases y actividades tanto presenciales como virtuales para elegir. Es tan simple como decidir lo que quieras hacer, seleccionar horarios, modalidad y una vez procesado el pago, LISTO, a disfrutar!!.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/maxigeno/grupo_8_MIK.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/maxigeno/grupo_8_MIK/issues"
+  },
+  "homepage": "https://github.com/maxigeno/grupo_8_MIK#readme",
+  "dependencies": {
+    "express": "^4.18.2"
+  }
+}

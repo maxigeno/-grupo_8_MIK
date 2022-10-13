@@ -1,0 +1,33 @@
+body{
+    margin:0%;
+    font-family:roboto;
+}
+
+/*Header*/
+
+.encabezado{
+    display: flex;
+    border-bottom: solid 3px #ff928b;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 2rem;
+    margin: 2%;
+}
+
+.logo{
+    width: 18vw;
+    height: 5vh;
+}
+
+.inicio{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    border-bottom: solid 3px #ff928b;
+    padding: 1%;
+    background-color: #ff928b;
+    margin-left: 40%;
+    margin-right: 40%;
+    border-radius: 5%;
+    font-size: 2rem;
+}
