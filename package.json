@@ -16,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/maxigeno/grupo_8_MIK/issues"
   },
-  "homepage": "https://github.com/maxigeno/grupo_8_MIK#readme"
+  "homepage": "https://github.com/maxigeno/grupo_8_MIK#readme",
+  "dependencies": {
+    "express": "^4.18.2"
+  }
 }
