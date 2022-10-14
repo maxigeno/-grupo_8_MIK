@@ -6,6 +6,10 @@ MIK es un e-commerce dirigido a todo tipo de público, básicamente lo que ofrec
 
 https://miro.com/app/board/uXjVPR0zsNE=/
 
+## Tablero
+
+https://trello.com/b/2RXE8aBU/mik
+
 > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > >
 
 # Integrantes del equipo
