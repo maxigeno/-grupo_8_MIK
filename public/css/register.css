@@ -1,0 +1,207 @@
+body{
+    font-family: "Roboto";
+    background-color: #EBEBEB;
+    padding-top: 80px;
+}
+
+/*
+   dark-primary: #303F9F;
+   primat : #3F51B5;
+   acento : #FF4081;
+ */
+
+
+/*=========== HEADER ================== */
+
+header{ 
+    display: flex;
+    flex-direction: column;
+    width: 100vw;
+    background-color: #fff;
+
+}
+
+header .header-container{
+    position: fixed;
+    top: 0;
+    left: 0;  
+    width: 100vw;
+    height: 80px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;  
+    background-color: #fff;
+    border-bottom: 1px solid rgba(73,69,52,0.3);
+   
+}
+
+header .menu-icon__container{
+  padding: 10px;
+  
+}
+.menu-icon{
+    font-size: 24px;
+    color: #303F9F;
+}
+
+header .logo__container{
+    width: 8%;
+    padding: 10px;
+}
+.logo__img{
+    width: 80%;
+   
+}
+
+header .icons__container{
+    margin-right: 10px;
+}
+.icon__container{
+    padding: 10px 10px 10px 0;
+}
+.icon{
+    font-size: 24px;
+    color: #303F9F;
+}
+
+header .search__container{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 15px 0;
+    background-color: #fff;
+    border-bottom: 1px solid rgba(73,69,52,0.3);
+  
+}
+.search__input{
+    width: 30%;
+    border-radius: 0.3rem;
+    padding: 0.25em 0.6em;
+    border: 1px solid #444;;
+    text-align: center;
+    box-shadow: 0 2px 3px rgba(0 0 0 /0.15);
+
+}
+/* .search___btn{
+    position: absolute;
+    left: 68%;
+    border-width: 0;
+    background-color: #fff;
+    border-left-color:rgba(73,69,52,0.5); 
+} */
+
+header .main-nav{
+    display: none;
+ /*    display: flex; */
+    justify-content: center;
+   
+
+}
+
+
+@media screen and (min-width: 788px){
+
+    header{
+        display: flex;
+    }
+}
+
+/*           Registro                      */
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+
+/*body{
+    background-image: url(/static/img/banner2.jpg)
+}}
+    box-shadow: 7px 13px 37px gray;
+*/
+
+.form-register{
+    width: 90vw;
+    max-width: 400px;
+    background-color: white;
+    padding: 30px;
+    margin: auto;
+    margin-top: 100px;
+    font-family: 'calibri';
+    color: gray;
+    border: solid 1px #303F9F
+}
+
+.form-register h3{
+    font-size: 22px;
+    margin-bottom: 20px;
+}
+
+.controls{
+    width: 100%;
+    background-color: white;
+    padding: 10px;
+    border-radius: 4px;
+    margin-bottom: 16px;
+    border: solid 1px #FF4081;
+    font-size: 18px;
+    font-family: 'calibri';
+}
+
+.form-register p{
+    height: 40px;
+    text-align: center;
+    font-size: 18px;
+    line-height: 40px;
+    color:gray
+}
+
+/*.form-register a{
+    text-decoration: none;
+    
+}*/
+
+.cancelar{
+    text-decoration: none;
+    color:white
+}
+
+.login{
+    text-decoration: none;
+    color: gray
+}
+
+.form-register a:hover{
+    color: #ebebeb;
+    text-decoration: underline;
+}
+
+.boton{
+    width: 100%;
+    background-color: #FF4081;
+    border: none;
+    color: white;
+    font-size: 16px;
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+    border-radius: 4px;
+    margin-bottom: 16px;
+}
+
+.date{
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+}
+
+.check{
+    text-align: center;
+    padding: 5px;
+}
+
+.fechaNacimiento{
+    text-align: center;
+    font-size: 16px;
+    margin-bottom: 10px;
+}
