@@ -1,1 +1,248 @@
+/*=========== Estilos Globales================== */
+body{
+    font-family: "Roboto";
+    background-color: #EBEBEB;
+    padding-top: 80px;
+}
+
+/*
+   dark-primary: #303F9F;
+   primat : #3F51B5;
+   acento : #FF4081;
+ */
+
+
+/*=========== HEADER ================== */
+
+header{ 
+    display: flex;
+    flex-direction: column;
+    width: 100vw;
+    background-color: #fff;
+
+}
+
+header .header-container{
+    position: fixed;
+    top: 0;
+    left: 0;  
+    width: 100vw;
+    height: 80px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;  
+    background-color: #fff;
+    border-bottom: 1px solid rgba(73,69,52,0.3);
+   
+}
+
+header .menu-icon__container{
+  padding: 10px;
+  
+}
+.menu-icon{
+    font-size: 24px;
+    color: #303F9F;
+}
+
+header .logo__container{
+    width: 8%;
+    padding: 10px;
+}
+.logo__img{
+    width: 80%;
+   
+}
+
+header .icons__container{
+    margin-right: 10px;
+}
+.icon__container{
+    padding: 10px 10px 10px 0;
+}
+.icon{
+    font-size: 24px;
+    color: #303F9F;
+}
+
+header .search__container{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 15px 0;
+    background-color: #fff;
+    border-bottom: 1px solid rgba(73,69,52,0.3);
+  
+}
+.search__input{
+    width: 30%;
+    border-radius: 0.3rem;
+    padding: 0.25em 0.6em;
+    border: 1px solid #444;;
+    text-align: center;
+    box-shadow: 0 2px 3px rgba(0 0 0 /0.15);
+
+}
+/* .search___btn{
+    position: absolute;
+    left: 68%;
+    border-width: 0;
+    background-color: #fff;
+    border-left-color:rgba(73,69,52,0.5); 
+} */
+
+header .main-nav{
+    display: none;
+ /*    display: flex; */
+    justify-content: center;
+   
+
+}
+.main-menu{
+    list-style: none;
+    margin-top: 0;
+    margin-bottom: 0;
+    padding-left: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+.main-menu__item{
+    padding: 1em;
+   /*  border-radius: 10px; */
+
+}
+.main-menu__link{
+    text-decoration: none;
+    padding: 5px;
+  
+}
+
+header .banner__container{
+    width: 100vw;
+}
+
+.banner{
+    width: 100%;
+}
+
+/*=========== MAIN ================== */
+main{
+   /*  width: 90vw; */
+    margin-left: auto;
+    margin-right: auto;
+}
+
+main .title{
+    text-align: center;
+    font-size: 25px;
+    font-weight: bold;
+    color: #666;
+}
+
+.cards{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+   
+}
+
+.card{
+    width: 100%;
+    min-width: 340px;
+    max-width: 450px;
+    margin-bottom: 105px;
+    border-radius:5px;
+    background-color: #fff;
+    box-shadow: 2px 3px 5px rgba(73,69,52,0.4);
+}
+.card__container-img{
+    overflow: hidden;
+
+}
+.card__img {
+    width: 450px;
+    height: 340px;
+}
+
+.card__container-info{
+    /* le pongo relative para que el hijo se acomde respecto al padre */
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 15px;
+}
+
+.card__label-new{
+    display: block;
+    font-size: 20px;
+    padding: 10px;
+    color: #fff;
+    background-color:  #FF4081;
+    border-radius: 10%;
+    /* alineo al centro el icono */
+    text-align: center;
+    position: absolute;
+    right: 40%;
+    top: -35px;
+}
+
+.card__price{
+    font-size: 20px;
+    color:#444;
+    align-self: flex-end;
+}
+
+.card__name{
+   /*  display: none; */
+    font-size: 24px ;
+    margin-top: 30px;
+    margin-bottom: 0;
+    color: #666;
+}
+
+
+@media screen and (min-width: 788px){
+
+    header{
+        display: flex;
+    }
+   
+    header .main-nav{
+        display: flex;
+        box-shadow: 2px 0 5px rgba( 0, 0, 0 ,.8);
+    }
+    .main-menu{
+        flex-direction: row;
+        margin: 10PX 0;
+        cursor: pointer;
+    }
+   
+    .main-menu__link{
+        background-color: deeppink;
+        padding: 8px 20px;
+        border-radius: 30px;
+        color: white;
+    }
+
+    .main-menu__item {
+        transition: transform 0.3s;
+        
+    }
+    .main-menu__item:hover {
+        transform: scale(1.1);
+        
+    }
+
+
+
+    /* Esconde menu icon */
+    header .menu-icon__container{
+      display: none;
+    }
+    
+}
 
