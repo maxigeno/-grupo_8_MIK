@@ -100,19 +100,12 @@ header .main-nav{
 }
 
 
-@media screen and (min-width: 788px){
-
-    header{
-        display: flex;
-    }
-}
-
 /*           Registro                      */
-*{
+/* *{
     margin:0;
     padding:0;
     box-sizing: border-box;
-}
+} */
 
 /*body{
     background-image: url(/static/img/banner2.jpg)
@@ -204,4 +197,44 @@ header .main-nav{
     text-align: center;
     font-size: 16px;
     margin-bottom: 10px;
+}
+
+
+@media screen and (min-width: 788px){
+
+    header{
+        display: flex;
+    }
+   
+    header .main-nav{
+        display: flex;
+        box-shadow: 2px 0 5px rgba( 0, 0, 0 ,.8);
+    }
+    .main-menu{
+        flex-direction: row;
+        margin: 10PX 0;
+        cursor: pointer;
+    }
+   
+    .main-menu__link{
+        background-color: deeppink;
+        padding: 8px 20px;
+        border-radius: 30px;
+        color: white;
+    }
+
+    .main-menu__item {
+        transition: transform 0.3s;
+        
+    }
+    .main-menu__item:hover {
+        transform: scale(1.1);
+        
+    }
+
+    /* Esconde menu icon */
+    header .menu-icon__container{
+      display: none;
+    }
+    
 }

@@ -13,10 +13,10 @@ app.get("/", (req, res) => {
   res.sendFile(path.resolve("./views/index.html"));
 });
 
-app.get('/register.html', (req, res) => {
-  res.sendFile(path.resolve('./views/register.html'));
+app.get("/register", (req, res) => {
+  res.sendFile(path.resolve("./views/register.html"));
 });
 
-app.get('/login.html', (req, res) => {
-  res.sendFile(path.resolve('./views/login.html'));
+app.get("/login", (req, res) => {
+  res.sendFile(path.resolve("./views/login.html"));
 });
