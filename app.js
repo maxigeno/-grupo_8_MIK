@@ -20,3 +20,7 @@ app.get("/register", (req, res) => {
 app.get("/login", (req, res) => {
   res.sendFile(path.resolve("./views/login.html"));
 });
+
+app.get('/productCart.html', (req, res) => {
+  res.sendFile(path.resolve('./views/productCart.html'))
+});
