@@ -1,0 +1,252 @@
+/*=========== Estilos Globales================== */
+body{
+    font-family: "Roboto";
+    background-color: #EBEBEB;
+    padding-top: 80px;
+}
+ul{
+    margin: 0 ;
+    padding: 0
+}
+
+li{
+    list-style: none;
+    list-style: none;
+    margin-top: 0;
+    margin-bottom: 0;
+    padding-left: 0;
+}
+
+a{
+    text-decoration: none;
+}
+
+/*
+   dark-primary: #303F9F;
+   primat : #3F51B5;
+   acento : #FF4081;
+ */
+
+
+/*=========== HEADER ================== */
+
+header{ 
+    display: flex;
+    flex-direction: column;
+    width: 100vw;
+    background-color: #fff;
+
+}
+
+header .header-container{
+    position: fixed;
+    top: 0;
+    left: 0;  
+    width: 100vw;
+    height: 80px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;  
+    background-color: #fff;
+    border-bottom: 1px solid rgba(73,69,52,0.3);
+   
+}
+
+header .menu-icon__container{
+  padding: 10px;
+  
+}
+.menu-icon{
+    font-size: 24px;
+    color: #303F9F;
+}
+
+header .logo__container{
+    width: 8%;
+    padding: 10px;
+}
+.logo__img{
+    width: 80%;
+   
+}
+
+header .icons__container{
+    margin-right: 10px;
+}
+.icon__container{
+    padding: 10px 10px 10px 0;
+}
+.icon{
+    font-size: 24px;
+    color: #303F9F;
+}
+
+header .search__container{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 15px 0;
+    background-color: #fff;
+    border-bottom: 1px solid rgba(73,69,52,0.3);
+  
+}
+.search__input{
+    width: 30%;
+    border-radius: 0.3rem;
+    padding: 0.25em 0.6em;
+    border: 1px solid #444;;
+    text-align: center;
+    box-shadow: 0 2px 3px rgba(0 0 0 /0.15);
+
+}
+/* .search___btn{
+    position: absolute;
+    left: 68%;
+    border-width: 0;
+    background-color: #fff;
+    border-left-color:rgba(73,69,52,0.5); 
+} */
+
+header .main-nav{
+    display: none;
+ /*    display: flex; */
+    justify-content: center;
+   
+
+}
+.main-menu{
+    display: flex;
+    flex-direction: column;
+}
+
+.main-menu__item{
+    padding: 1em;
+   /*  border-radius: 10px; */
+
+}
+.main-menu__link{
+    padding: 5px;
+  
+}
+
+header .banner__container{
+    width: 100vw;
+}
+
+.banner{
+    width: 100%;
+}
+
+/*=========== MAIN ================== */
+.main-container-product{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+h4{
+    color: black;
+    font-family: "Roboto";
+}
+
+h3{
+    color: blue;
+    font-family: "Roboto";
+    background-color: #EBEBEB;
+}
+
+.card_description{
+    justify-content: center;
+    background-color: #EBEBEB;
+    font-family: "Roboto";
+    display: flex;
+    
+}
+
+/* =========FOOTER ============= */
+
+footer{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    background-color: #fff;
+    border-top: 1px solid rgba(73,69,52,0.3);
+  
+   
+}
+
+footer .social__icons{
+    width: 100%;
+    margin-top:20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+footer .logo__img{
+    width: 50px;
+}
+
+footer .social__icons ul {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+}
+.social__link{
+    padding: 10px;
+    cursor: pointer;
+}
+.social__link i{
+    font-size: 25px;
+}
+
+footer .footer-info {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer-info__container-img{
+    width: 40%;
+    display: flex;
+    justify-content: center;
+    border-right: 1px solid rgba(73,69,52,0.3);
+}
+
+.footer-info__nav{
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+   /*  align-items: center; */
+}
+.footer-info__nav p{
+    align-self: center;
+    font-size: 16;
+    font-weight: bold;
+     color: #303F9F;
+     margin-bottom: 0px;
+}
+
+.footer-info__navbar{
+    align-self: center;
+    margin-top: 0;
+    margin-bottom: 20px;
+    padding: 0 10px 10px 10px;
+}
+
+.footer-info__navbar ul li{
+    text-align: center;
+}
+.footer-info__link{
+    font-size: 14px;
+    color: #303F9F;
+    cursor: pointer;
+}
+
+
+
