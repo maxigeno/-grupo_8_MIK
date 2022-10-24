@@ -114,7 +114,7 @@ header .main-nav{
 */
 
 .form-register{
-    width: 90vw;
+    width: 80%;
     max-width: 400px;
     background-color: white;
     padding: 30px;
@@ -131,7 +131,7 @@ header .main-nav{
 }
 
 .controls{
-    width: 95%;
+    width: 90%;
     background-color: white;
     padding: 10px;
     border-radius: 4px;
@@ -154,7 +154,7 @@ header .main-nav{
     
 }*/
 
-.cancelar{
+a{
     text-decoration: none;
     color:white
 }
@@ -170,7 +170,7 @@ header .main-nav{
 }
 
 .boton{
-    width: 100%;
+    width: 95%;
     background-color: #FF4081;
     border: none;
     color: white;

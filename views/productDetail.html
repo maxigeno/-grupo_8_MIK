@@ -1,104 +1,151 @@
 <!DOCTYPE html>
-
-<html>
-
+<html lang="es">
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- google-fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <!--font-awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- CSS -->
+    <link rel="stylesheet" href="/static/css/normalize.css">
+    <link rel="stylesheet" href="/static/css/productDetail.css">
+    <title>MIK</title>
 </head>
-
 <body>
+<header>
 
-    <header>
-        <div class="header-container">
+    <div class="header-container">
 
-            <span class="menu-icon__container">
-                <i class="fa-solid fa-bars menu-icon"></i>
-            </span>
+        <span class="menu-icon__container">
+               <i class="fa-solid fa-bars menu-icon"></i>
+        </span>
+    
+        <a href="/" class="logo__container">
+               <img class="logo__img" src="/static/img/Logo_MIK.png" alt="logo Mik">
+        </a>
+    
+        <div class="icons__container">
+               <a href="productCart.html" class="icon__container">
+                   <i class="fa-solid fa-cart-shopping icon"></i>
+               </a>
+               <a href="/login" class="icon__container">
+                <i class="fa-regular fa-circle-user icon"></i>
+               </a>
+        </div>
 
-            <a href="/" class="logo__container">
-                <img class="logo__img" src="/static/img/Logo_MIK.png" alt="logo Mik">
-            </a>
+    </div>
+    <!-- BARRA DE BUSQUEDA -->
+   <!--  <div class="search__container"> -->
+   <!--      <input class="search__input" type="text" placeholder="Ingrese su buscar.."> -->
+       <!--  <button class="search___btn"><i class="fa-solid fa-magnifying-glass"></i></button> -->
+   <!--  </div> -->
 
-            <div class="icons__container">
-                <a href="#" class="icon__container">
-                    <i class="fa-solid fa-cart-shopping icon"></i>
-                </a>
-                <a href="/login" class="icon__container">
-                    <i class="fa-regular fa-circle-user icon"></i>
-                </a>
+
+    <nav class="main-nav">
+        <ul class="main-menu">
+            <li class = "main-menu__item">
+                <a class="main-menu__link" href="#">Adultos</a>
+            </li>
+            <li class = "main-menu__item">
+                <a class="main-menu__link" href="#">Adolescentes</a>
+            </li>
+            <li class = "main-menu__item">
+                <a class="main-menu__link" href="#">Niños</a>
+            </li>
+            <li class = "main-menu__item">
+                <a class="main-menu__link" href="#">Bebes</a>
+           </li>
+            <li class = "main-menu__item">
+                <a class="main-menu__link"  href="#">Familia</a>
+            </li>
+        </ul>
+    </nav>
+</header>
+
+<main>
+        <div class="cards">
+            <h3 class="title">Elegí disponibilidad</h3>
+            <article class='card'>
+            <div class="card__container-img">
+                <img class="card__img" src="/static/img/pintura.webp" alt="Imagen Deportiva">
+            </div>
+            <div class="card__container-info">
+                <h4 class="card__name">CURSO DE PINTURA </h4>
+                <p class="card__description">Descripcion breve del curso</p>
+                <p class="card__price">$2500</p>
+                <input class='boton' type="submit" value="Comprar">
+            </div>
+            </article>
+
+            <article class='card' >
+            <div class="card__container-img">
+                <img class="card_img" src="/static/img/basket.jpg" alt="Imagen Deportiva">
+            </div>
+            <div class="card__container-info">
+                <h4 class="card__name"> CURSO DE BASKETBALL</h4>
+                <p class="card_description">Descripcion breve del curso</p>
+                <p class="card__price">$2500</p>
+                <input class='boton' type="submit" value="Comprar">
             </div>
 
-        </div>
-    </header>
-
-    <main>
-        <div class="main-container-product">
-
-            <img class="logo__img" src="/static/img/Logo_MIK.png" alt="logo Mik">
-
-            <h4>Elige una Disponibilidad</h4>
-
-            <h3> CURSO DE PINTURA </h3>
-            <article>
-                <img class="card__img" src="/static/img/pintura.webp" alt="Imagen Deportiva">
-
-                <p class="card_description">Descripcion breve del curso</p>
-                <p class="card__price">$2500</p>
-                <input type="submit" value="Comprar">
-
             </article>
 
-            <h3> CURSO DE BASKETBALL</h3>
-            <article>
-                <img class="card_img" src="/static/img/basket.jpg" alt="Imagen Deportiva">
-
-                <p class="card_description">Descripcion breve del curso</p>
-                <p class="card__price">$2500</p>
-                <input type="submit" value="Comprar">
-
-            </article>
-
-            <h3> CURSO DE VOLEIBOL </h3>
-            <article>
+            <article class="card">
+            <div class='card__container-img'>
                 <img class="card__img" src="/static/img/voleibol.jpg" alt="Imagen Deportiva">
-
-                <p class="card_description">Descripcion breve del curso</p>
+            </div>
+            <div class="card__container-info">
+                <h4 class="card__name"> CURSO DE VOLEIBOL </h4>
+                <p class="card__description">Descripcion breve del curso</p>
                 <p class="card__price">$2500</p>
-                <input type="submit" value="Comprar">
-
+                <input class='boton' type="submit" value="Comprar">
+            </div>
             </article>
 
-            <h3> CURSO DE NATACION </h3>
-            <article>
+            <article class='card'>
+            <div class="card__container-img">
                 <img class="card__img" src="/static/img/Natacion.jpg" alt="Imagen Deportiva">
-
-                <p class="card_description">Descripcion breve del curso</p>
+            </div>
+            <div class="card__container-info">
+                <h4 class="card__name"> CURSO DE NATACION </h4>
+                <p class="card__description">Descripcion breve del curso</p>
                 <p class="card__price">$2500</p>
-                <input type="submit" value="Comprar">
+                <input class='boton' type="submit" value="Comprar">
+            </div>
 
             </article>
         </div>
 
     </main>
 
-    <footer></footer>
-    <section class="footer-info">
-        <div class="footer-info__container-img">
-            <img class="logo__img" src="/static/img/Logo_MIK.png" alt="Logo de MIK">
-        </div>
-        <div class="footer-info__nav">
-            <p>Tienda</p>
-            <div class="footer-info__navbar">
-                <ul>
-                    <li><a class="footer-info__link" href="#">¿Cómo comprar?</a></li>
-                    <li><a class="footer-info__link" href="#">Política de devoluciones</a></li>
-                    <li><a class="footer-info__link" href="#"></a></li>
-                </ul>
-            </div>
-        </div>
+    <footer>
 
-    </section>
+        <section class="social__icons">
+            <ul>
+                <li><a class="social__link" href=""><i class="fa-brands fa-facebook"></i></a>
+                <li><a class="social__link" href=""><i class="fa-brands fa-square-twitter"></i></a></li>
+                <li><a class="social__link" href=""><i class="fa-brands fa-instagram"></i></a></li>
+            </ul>
+        </section>
+        <section class="footer-info">
+            <div class="footer-info__container-img">
+                <img class="logo__img" src="/static/img/Logo_MIK.png" alt= "Logo de MIK">
+            </div>
+            <div class="footer-info__nav">
+                <p>Tienda</p>
+                <div class="footer-info__navbar">
+                    <ul>
+                        <li><a class="footer-info__link" href="#">¿Cómo comprar?</a></li>
+                        <li><a class="footer-info__link" href="#">Política de devoluciones</a></li>
+                        <li><a class="footer-info__link" href="#"></a></li>
+                    </ul>
+                </div>
+            </div>
+        
+        </section>
+    </footer>
 
 </body>
 
