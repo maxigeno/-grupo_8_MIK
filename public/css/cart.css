@@ -261,7 +261,6 @@ footer .footer-info {
     header .menu-icon__container{
       display: none;
     }
-    
 }
 
 /* ESTILOS DEL CARRO DE COMRPAS*/
@@ -346,5 +345,18 @@ main{
     margin-bottom: 16px;
 }
 
+@media (min-width:788px){
+    .cart_details{
+        flex-direction: row;
+        justify-content: space-around;
+    }
 
+    .order_summary{
+        width: 20vw;
+    }
+
+    .product{
+        width: 40vw;
+    }
+}
 

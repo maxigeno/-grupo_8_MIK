@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <!-- CSS -->
     <link rel="stylesheet" href="/static/css/normalize.css">
-    <link rel="stylesheet" href="/static/css/productDetail.css">
+    <link rel="stylesheet" href="/static/css/productIndex.css">
     <title>MIK</title>
 </head>
 <body>
@@ -63,54 +63,60 @@
         </ul>
     </nav>
 </header>
-<br><br>
 
 <main>
-    <article class="product_details">
-        <div class="product_img">
-            <img class="card__img" src="/static/img/natacion.webp" alt="Imagen Deportiva">
-        </div>
-        <section class="info">
-        <div class="product_title">
-            <h3>Curso de natación</h3>
-            <p class="price">$9.770</p>
-        </div>
-        <div class="filter">
-        <p>Seleccione dia y hora</p>
-        <div class="form_container">
-            <form action="/days" method="POST">
-                <select name="days">
-                    <option value="1">lunes</option>
-                    <option value="2">Martes</option>
-                    <option value="3">Miercoles</option>
-                    <option value="4">Jueves</option>
-                    <option value="5">Viernes</option>
-                    <option value="6">Sabado</option>
-                    <option value="7">Domingo</option>
-                </select>
-            </form>
-            <from action="/horas" method="POST">
-                <select name="hours">
-                    <option value="5pm">05:00 p.m. - 06:00 p.m.</option>
-                    <option value="6pm">06:00 p.m. - 07:00 p.m.</option>
-                    <option value="7pm">07:00 p.m. - 08:00 p.m.</option>
-                </select>
-            </form>
-        </div>
-        </div>
-        </section>
-        </article>
-    <article class="product_description">
-            <h2>Descripción</h2>
-            <p class="description">
-                ¿Quieres que tu hijo aprenda a nadar? En MIK acompañamos este proceso por medio de los diferentes niveles que te ofrecemos en este curso donde tu hijo podrá familiarizarse con el agua, adquiriendo habilidades básicas que se perfeccionaran a medida que supere cada nivel y con las que finalmente logrará realizar movimientos técnicos de natación. 
-                <br><br>
-                Este curso consta de 4 sesiones de 1 hora cada una, dirigido para niños de 4 a 8 años. 
-            </p>
-        </div>
+    <h3 class="title">Elegí disponibilidad</h3>
+        <div class="cards">
+            <article class='card'>
+            <div class="card__container-img">
+                <img class="card__img" src="/static/img/pintura.webp" alt="Imagen Deportiva">
+            </div>
+            <div class="card__container-info">
+                <h4 class="card__name">CURSO DE PINTURA </h4>
+                <p class="card__description">Descripcion breve del curso</p>
+                <p class="card__price">$2.500</p>
+                <input class='boton' type="submit" value="Comprar">
+            </div>
+            </article>
 
-    </article>
+            <article class='card' >
+            <div class="card__container-img">
+                <img class="card__img" src="/static/img/yoga.webp" alt="Imagen Deportiva">
+            </div>
+            <div class="card__container-info">
+                <h4 class="card__name"> CURSO DE YOGA</h4>
+                <p class="card_description">Descripcion breve del curso</p>
+                <p class="card__price">$11.770</p>
+                <input class='boton' type="submit" value="Comprar">
+            </div>
 
+            </article>
+
+            <article class="card">
+            <div class='card__container-img'>
+                <img class="card__img" src="/static/img/natacion.webp" alt="Imagen Deportiva">
+            </div>
+            <div class="card__container-info">
+                <h4 class="card__name"> CURSO DE NATACIÓN </h4>
+                <p class="card__description">Descripcion breve del curso</p>
+                <p class="card__price">$9.770</p>
+                <input class='boton' type="submit" value="Comprar">
+            </div>
+            </article>
+
+            <article class='card'>
+            <div class="card__container-img">
+                <img class="card__img" src="/static/img/voleibal.webp" alt="Imagen Deportiva">
+            </div>
+            <div class="card__container-info">
+                <h4 class="card__name"> CURSO DE VOLEIBOL </h4>
+                <p class="card__description">Descripcion breve del curso</p>
+                <p class="card__price">$4.770</p>
+                <input class='boton' type="submit" value="Comprar">
+            </div>
+
+            </article>
+        </div>
 
     </main>
 
