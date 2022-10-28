@@ -410,7 +410,6 @@ footer .footer-info {
     /* hover iconos mas label */
     .icons__container{
         display: flex;
-       
     }
     .icons__container a{
        transition: transform 2s;
@@ -426,6 +425,7 @@ footer .footer-info {
         transform: scale(1.1);
         
     }
+    
     .icons__container a{
         display: flex;
         flex-direction: column;
