@@ -1,0 +1,250 @@
+[33mcommit bb53794ca680b7bd28c0b9f5123edfc87c215c0d[m[33m ([m[1;36mHEAD -> [m[1;32mdev[m[33m, [m[1;31morigin/dev[m[33m)[m
+Author: Maximiliano Genolet <maximilianogenolet@gmail.com>
+Date:   Thu Oct 27 22:47:14 2022 -0300
+
+    Se agrego texto a los iconos header
+
+[33mcommit 9e32af9f4a634f111539f38842bcce26d280d4e2[m
+Author: DianaQuiroga2 <dquirogab@unal.edu.co>
+Date:   Thu Oct 27 13:22:09 2022 -0500
+
+    product detail y product index
+
+[33mcommit c5a2f419794886d7291ef9cd83a4c7e719214eee[m
+Merge: 8351f1c bc31622
+Author: DianaQuiroga2 <dquirogab@unal.edu.co>
+Date:   Thu Oct 27 11:49:04 2022 -0500
+
+    Merge branch 'dev' of https://github.com/maxigeno/grupo_8_MIK into dev
+
+[33mcommit 8351f1c0bcb94dd816c7e8541b905ca7adfbecb1[m
+Author: DianaQuiroga2 <dquirogab@unal.edu.co>
+Date:   Thu Oct 27 11:47:15 2022 -0500
+
+    enlace carro
+
+[33mcommit bc316220bd8146a152e361a28b43309a495635e9[m
+Author: Maximiliano Genolet <maximilianogenolet@gmail.com>
+Date:   Thu Oct 27 12:19:29 2022 -0300
+
+    COrreciones header y banner + cards responsive en home
+
+[33mcommit 0491258807c83fd32fef88de6cd3bf85f483550c[m
+Author: Maximiliano Genolet <maximilianogenolet@gmail.com>
+Date:   Thu Oct 27 07:29:25 2022 -0300
+
+    Se modifico navbar y banner
+
+[33mcommit 2bbd8e4d08fd8f30d6fc6fa57abf2a9a025e1360[m
+Author: DianaQuiroga2 <dquirogab@unal.edu.co>
+Date:   Mon Oct 24 10:30:53 2022 -0500
+
+    moficación estilos
+
+[33mcommit d68d990cb3397b9b26ed70d43535b1f203661d17[m
+Merge: 6014ca1 4ced9d7
+Author: 1vanSoria <o.ivansoria@gmail.com>
+Date:   Sat Oct 22 20:10:55 2022 -0300
+
+    Merge branch 'dev' of https://github.com/maxigeno/grupo_8_MIK into dev
+
+[33mcommit 6014ca10d27e196110d1fd3aab3bddcf28862868[m
+Author: 1vanSoria <o.ivansoria@gmail.com>
+Date:   Sat Oct 22 18:59:31 2022 -0300
+
+    productDetail
+
+[33mcommit 4ced9d7848172c2f92ecffdf0779ed7b908cef99[m
+Author: DianaQuiroga2 <dquirogab@unal.edu.co>
+Date:   Fri Oct 21 14:51:02 2022 -0500
+
+    Carrito de compra
+
+[33mcommit 134a5a034b0a3b0e0864b489e1de159379ce5353[m
+Author: Maximiliano Genolet <maximilianogenolet@gmail.com>
+Date:   Thu Oct 20 12:16:59 2022 -0300
+
+    footer mobile y btn card listo
+
+[33mcommit 990e13fdb4b7dc631d352d05b5e773a89e831722[m
+Author: Maximiliano Genolet <maximilianogenolet@gmail.com>
+Date:   Thu Oct 20 09:30:47 2022 -0300
+
+    PSe agrego @medias en login y register y navegacion
+
+[33mcommit 248f301d6ab0755b7d8ffeadb6413835666f1961[m
+Author: DianaQuiroga2 <dquirogab@unal.edu.co>
+Date:   Wed Oct 19 08:42:14 2022 -0500
+
+    Registro y login
+
+[33mcommit 7673ad3a2971693387a7438b7db6fdfd7eceb17a[m
+Author: Maximiliano Genolet <maximilianogenolet@gmail.com>
+Date:   Wed Oct 19 00:05:44 2022 -0300
+
+    home con las img
+
+[33mcommit a3b0196032e9c44c4bc8a86688def7814470b92c[m
+Author: Maximiliano Genolet <maximilianogenolet@gmail.com>
+Date:   Wed Oct 19 00:02:00 2022 -0300
+
+    home primeros estilos
+
+[33mcommit 6778491970c8a650909e3591a60d54a4d4b5791f[m[33m ([m[1;31morigin/main[m[33m, [m[1;31morigin/HEAD[m[33m, [m[1;32mmain[m[33m)[m
+Author: Maximiliano Genolet <maximilianogenolet@gmail.com>
+Date:   Fri Oct 14 11:05:11 2022 -0300
+
+    Se modifico app.js y creo estructura base index.html
+
+[33mcommit 953042d1edb6e24e1421162097a9768c89cea745[m
+Author: DianaQuiroga2 <dquirogab@unal.edu.co>
+Date:   Thu Oct 13 23:00:09 2022 -0500
+
+    imagenes
+
+[33mcommit 35196a455cfa28cf60e4771c0b2c9a0a7591fe71[m
+Author: DianaQuiroga2 <dquirogab@unal.edu.co>
+Date:   Thu Oct 13 22:43:59 2022 -0500
+
+    logo
+
+[33mcommit e7773c8ea18123c4fbb3fda66237805b61aa5d46[m
+Author: DianaQuiroga2 <dquirogab@unal.edu.co>
+Date:   Thu Oct 13 22:43:07 2022 -0500
+
+    logo
+
+[33mcommit 5bb01fd6a88753f6e46aabb43c911da4196c5bfe[m
+Author: DianaQuiroga2 <dquirogab@unal.edu.co>
+Date:   Thu Oct 13 22:28:05 2022 -0500
+
+    nada
+
+[33mcommit a34eeeb2cf19202312dc8e265e5b115eed8c3ec5[m
+Author: DianaQuiroga2 <dquirogab@unal.edu.co>
+Date:   Thu Oct 13 22:16:48 2022 -0500
+
+    nada
+
+[33mcommit c10f2eb46aa89943178285454d8f8fd9ad23ede5[m
+Author: DianaQuiroga2 <dquirogab@unal.edu.co>
+Date:   Thu Oct 13 21:56:35 2022 -0500
+
+    tablero
+
+[33mcommit 2e07fd794225956ac236881d4d4756b27b4840a4[m
+Author: DianaQuiroga2 <dquirogab@unal.edu.co>
+Date:   Thu Oct 13 21:53:17 2022 -0500
+
+    retro
+
+[33mcommit f308da0074cfddaf0e7bd13e9c5d0656b7ac1e75[m
+Author: DianaQuiroga2 <dquirogab@unal.edu.co>
+Date:   Thu Oct 13 18:35:23 2022 -0500
+
+    logo
+
+[33mcommit 7734738f0aab9c281a385db288b9cddb3dbfafc0[m
+Author: DianaQuiroga2 <dquirogab@unal.edu.co>
+Date:   Thu Oct 13 18:30:33 2022 -0500
+
+    nada
+
+[33mcommit 6625ff2e177f03f93fa82cfed17d1bbe956c83ce[m
+Merge: 902425c 1c085ca
+Author: DianaQuiroga2 <dquirogab@unal.edu.co>
+Date:   Thu Oct 13 18:28:59 2022 -0500
+
+    Merge branch 'main' of https://github.com/maxigeno/grupo_8_MIK
+
+[33mcommit 902425c459ede29d42dc322c298b239a6eb26bb7[m
+Author: DianaQuiroga2 <dquirogab@unal.edu.co>
+Date:   Thu Oct 13 18:28:51 2022 -0500
+
+    actualización
+
+[33mcommit 1c085ca944c7d0bf4524b3b44c0b5c3d70f93518[m
+Author: DianaQuiroga2 <dquirogab@unal.edu.co>
+Date:   Thu Oct 13 17:38:30 2022 -0500
+
+    iniciando
+
+[33mcommit d0a05861ce638c5b40ad59e07ee0d40be8af6162[m
+Author: DianaQuiroga2 <dquirogab@unal.edu.co>
+Date:   Thu Oct 13 15:50:06 2022 -0500
+
+    Servidor
+
+[33mcommit 88400b73cb632114315d7ba03eab9c2d898d57e6[m
+Author: DianaQuiroga2 <dquirogab@unal.edu.co>
+Date:   Thu Oct 13 15:39:28 2022 -0500
+
+    wireframe
+
+[33mcommit 21cd4bf25c0f8ae0e79f45be8b4c8686c023b955[m
+Author: Maximiliano Genolet <maximilianogenolet@gmail.com>
+Date:   Tue Oct 11 23:53:15 2022 -0300
+
+    agregue udemy
+
+[33mcommit 7c6483ba069beb757deed1f2d57e0151d94b35c6[m
+Author: Maximiliano Genolet <maximilianogenolet@gmail.com>
+Date:   Tue Oct 11 22:01:58 2022 -0300
+
+    agregue ML
+
+[33mcommit bc5407311b36c222293449aed8bfafd496b2b872[m
+Author: Maximiliano Genolet <maximilianogenolet@gmail.com>
+Date:   Tue Oct 11 21:49:33 2022 -0300
+
+    Descripcion personal
+
+[33mcommit 42033fcbac3be3a3de207965c8d77bad9668a282[m
+Merge: f654b42 6c0deb8
+Author: 1vanSoria <o.ivansoria@gmail.com>
+Date:   Sun Oct 9 23:01:09 2022 -0300
+
+    introIvan
+
+[33mcommit f654b4279012284f1ace13b911477cc3bd051428[m
+Author: 1vanSoria <o.ivansoria@gmail.com>
+Date:   Sun Oct 9 22:55:18 2022 -0300
+
+    nada
+
+[33mcommit 6c0deb81fc58e8f315ee3ad801d87d814928b697[m
+Author: DianaQuiroga2 <dquirogab@unal.edu.co>
+Date:   Sun Oct 9 17:59:02 2022 -0500
+
+    crehana
+
+[33mcommit 97110b26a2028e74799a1bb6d46ddcbce5d2eaa9[m
+Merge: 3bb4e17 6ee7439
+Author: DianaQuiroga2 <dquirogab@unal.edu.co>
+Date:   Sun Oct 9 17:50:17 2022 -0500
+
+    Integrantes y pagina de inspiración
+
+[33mcommit 3bb4e1733e1d74a0a685d80e9f057a9a38b00e2c[m
+Author: DianaQuiroga2 <dquirogab@unal.edu.co>
+Date:   Sun Oct 9 17:26:49 2022 -0500
+
+    nada
+
+[33mcommit 6ee74396bcf3a213cee61036c45a31847ef0c68f[m
+Author: DianaQuiroga2 <114445627+DianaQuiroga2@users.noreply.github.com>
+Date:   Thu Oct 6 13:20:11 2022 -0500
+
+    Update README.md
+
+[33mcommit dad766e2bc6ad5d5be5ffbc1dd5ca11fac147376[m
+Author: Maximiliano Genolet <maximilianogenolet@gmail.com>
+Date:   Wed Oct 5 22:56:44 2022 -0300
+
+    Descripcion del proyecto - README
+
+[33mcommit 4accc8ebbf39af167d31bfa5421c8d976c6cbe18[m
+Author: Maximiliano Genolet <56809576+maxigeno@users.noreply.github.com>
+Date:   Mon Oct 3 21:07:56 2022 -0300
+
+    Initial commit

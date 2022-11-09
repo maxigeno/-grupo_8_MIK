@@ -138,7 +138,7 @@ header .main-nav{
     display: flex;
     width: 100%;
     height: 300px;
-    background-image: url('../img/banner2.jpg');
+    background-image: url('../img/banner2.webp');
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -262,7 +262,7 @@ main .title{
     /* alineo al centro el icono */
     text-align: center;
     position: absolute;
-    right: 40%;
+    right: 36%;
     top: -40px;
 }
 
