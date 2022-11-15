@@ -24,6 +24,7 @@ app.use("/productCart", indexRouter);
 app.use("/productDetail", indexRouter);
 app.use("/productIndex", indexRouter);
 app.use("/users", usersRouter);
+app.use("/productCreate", indexRouter);
 
 
 app.listen(3030, () => {

@@ -43,7 +43,10 @@ const mainControllers = {
   },
   productIndex: (req, res) =>{
     res.render('productIndex');
-  }
+  },
+  productCreate: (req, res) =>{
+    res.render('productCreate');
+  },
 };
 
 module.exports = mainControllers;

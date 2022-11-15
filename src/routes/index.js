@@ -11,6 +11,7 @@ router.get('/register', mainControllers.register);
 router.get('/productCart', mainControllers.productCart);
 router.get('/productIndex', mainControllers.productIndex);
 router.get("/detalle/:id", mainControllers.detalle);
+router.get('/productCreate', mainControllers.productCreate);
 
 
 module.exports = router;
