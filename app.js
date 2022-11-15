@@ -1,7 +1,7 @@
 const express = require("express");
 const methodOverride = require("method-override"); // Pasar poder usar los métodos PUT y DELETE
 const path = require("path");
-S;
+
 const app = express();
 
 //configuro lo static para express
