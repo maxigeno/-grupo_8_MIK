@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="es">
+<%- include('./partials/head')%>
+    <link rel="stylesheet" href="/static/css/cart.css">
+</head>
+<body>
+<%- include('./partials/header')%>
+<main>
+    <diV class="cart_title">
+        <h2>Carrito de compra</h2>
+    </diV>
+    <artile class="cart_details">
+        <section class="product">
+            <div class="product_detail">
+                <img class="card_img" src="/static/img/pintura.webp" alr="imagen del curso">
+                <h4>Curso de arte</h4>
+            </div>
+            <div class="price">
+                <p>Precio</p>
+                <h3>$6.770</h3>
+            </div>
+        </section>
+        <section class="order_summary">
+            <h3>Resumen</h3>
+            <div class="order_summary_subtotal">
+                <p>Subtotal</p>
+                <p>$6.770</p>
+            </div>
+            <div class="descuento">
+                <p>Descuento</p>
+                <p>$0</p>
+            </div>
+            <div class="order_summary_total">
+                <p>Total</p>
+                <p>$6.770</p>
+            </div>
+            <button class="comprar" type="submit">Finalizar compra</button>
+        </section>
+    </artile>
+</main>
+<%- include('./partials/footer')%>
+</body>
+</html>

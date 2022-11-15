@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="es">
+<%- include('./partials/head')%>
+    <link rel="stylesheet" href="/static/css/login.css">
+</head>
+<body>
+<%- include('./partials/header')%>
+
+<main>
+    <section class="form-register">
+        <h3>Iniciar sesión</h3>
+        <form action="/" method="POST">
+        <input class="controls" type="email" name="email" id="email" placeholder="Correo electrónico"><br>
+        <input class="controls" type="password" name="password" id="password" placeholder="Ingrese una contraseña"><br>
+        <button class="boton" type="submit"><a class="Ingresar" href='/'> Ingresar</button>
+        <button class="boton" type="reset"><a class="cancelar" href='/'> Cancelar </a></button>
+        </form>
+        <p><a class="login" href='register'> Aun no estoy registrado</a></p>
+    </section>
+</main>
+<%- include('./partials/footer')%>
+</body>
+</html>
+
+
