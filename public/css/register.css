@@ -153,7 +153,8 @@ main{
     padding: 30px;
     font-family: 'calibri';
     color: gray;
-    border: solid 1px #303F9F
+    border: solid 1px #303F9F;
+    margin-top: 20px;
 }
 
 .form-register h3{

@@ -1,5 +1,5 @@
 const express = require("express");
-const methodOverride = require("method-override"); // Pasar poder usar los métodos PUT y DELETE
+//const methodOverride = require("method-override"); // Pasar poder usar los métodos PUT y DELETE
 const path = require("path");
 
 const app = express();
@@ -9,7 +9,6 @@ app.use("/static", express.static("public"));
 
 app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
-app.use(methodOverride("_method"));
 
 //Configuro motor de plantilla
 app.set("view engine", "ejs");
@@ -20,8 +19,8 @@ const usersRouter = require("./src/routes/users");
 const productsRouter = require("./src/routes/products");
 
 app.use("/", indexRouter);
-app.use("/users", usersRouter);
-app.use("/products", productsRouter);
+app.use("/user", usersRouter);
+app.use("/product", productsRouter);
 
 app.listen(3030, () => {
   console.log("Servidor funcionando");

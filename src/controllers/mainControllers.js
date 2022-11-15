@@ -15,26 +15,6 @@ const mainControllers = {
     let inSale = products.filter((product) => product.inSale === true);
     res.render("index", { newCourse, inSale, calculateDiscount });
   },
-  detalle: (req, res) => {
-    let idParam = req.params.id;
-    let product = products.find((product) => product.id === idParam);
-    res.render("productDetail", { product });
-  },
-  login: (req, res) => {
-    res.render("login");
-  },
-  register: (req, res) => {
-    res.render("register");
-  },
-  productCart: (req, res) => {
-    res.render("productCart");
-  },
-  productDetail: (req, res) => {
-    res.render("productDetail");
-  },
-  productIndex: (req, res) => {
-    res.render("productIndex");
-  },
 };
 
 module.exports = mainControllers;
