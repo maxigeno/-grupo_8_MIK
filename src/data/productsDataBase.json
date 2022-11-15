@@ -1,18 +1,98 @@
 [
- {
-    "id": 1, 
-    "name": "Cocina",
-    "description": "¡El nuevo smartphone que lo tiene todo! Con este lanzamiento, Apple ha superado todos sus récords. Su diseño se destaca por sus líneas finas y distinguidas a partir de una sola hoja de vidrio resistente, combinada con aluminio de excelente calidad.",
-    "isNew": true, 
-    " inSale" : false, 
-    "price": 148000,
-    "discount": 10,
-    "image": "../public/img/cocina.webp",
-    "category": "cocina",
-    "target": "niños"
+    {
+        "id": 1,
+        "name": "Arte",
+        "description": "¡El nuevo smartphone que lo tiene todo! Con este lanzamiento, Apple ha superado todos sus récords. Su diseño se destaca por sus líneas finas y distinguidas a partir de una sola hoja de vidrio resistente, combinada con aluminio de excelente calidad.",
+        "isNew": true,
+        " inSale": false,
+        "price": 6.770,
+        "discount": 0,
+        "image": "../public/img/pintura.webp",
+        "category": "arte",
+        "target": "niños"
+    },
+    {
+        "id": 2,
+        "name": "Natacion-Niños",
+        "description": "¡El nuevo smartphone que lo tiene todo! Con este lanzamiento, Apple ha superado todos sus récords. Su diseño se destaca por sus líneas finas y distinguidas a partir de una sola hoja de vidrio resistente, combinada con aluminio de excelente calidad.",
+        "isNew": true,
+        " inSale": false,
+        "price": 9.770,
+        "discount": 0,
+        "image": "../public/img/natacion.webp",
+        "category": "natacion",
+        "target": "niños"
+    },
+    {
+        "id": 3,
+        "name": "Stand Up-Adultos",
+        "description": "¡El nuevo smartphone que lo tiene todo! Con este lanzamiento, Apple ha superado todos sus récords. Su diseño se destaca por sus líneas finas y distinguidas a partir de una sola hoja de vidrio resistente, combinada con aluminio de excelente calidad.",
+        "isNew": true,
+        " inSale": false,
+        "price": 20.770,
+        "discount": 0,
+        "image": "../public/img/stand-up.webp",
+        "category": "stand-up",
+        "target": "adultos"
+    },
+    {
+        "id": 4,
+        "name": "Yoga-Adultos",
+        "description": "¡El nuevo smartphone que lo tiene todo! Con este lanzamiento, Apple ha superado todos sus récords. Su diseño se destaca por sus líneas finas y distinguidas a partir de una sola hoja de vidrio resistente, combinada con aluminio de excelente calidad.",
+        "isNew": true,
+        " inSale": false,
+        "price": 11.770,
+        "discount": 0,
+        "image": "../public/img/yoga.webp",
+        "category": "yoga",
+        "target": "adultos"
+    },
+    {
+        "id": 5,
+        "name": "Voley",
+        "description": "¡El nuevo smartphone que lo tiene todo! Con este lanzamiento, Apple ha superado todos sus récords. Su diseño se destaca por sus líneas finas y distinguidas a partir de una sola hoja de vidrio resistente, combinada con aluminio de excelente calidad.",
+        "isNew": false,
+        " inSale": true,
+        "price": 6.770,
+        "discount": 40,
+        "image": "../public/img/voleibal.webp",
+        "category": "deportes",
+        "target": "adolescentes"
+    },
+    {
+        "id": 6,
+        "name": "Cocina",
+        "description": "¡El nuevo smartphone que lo tiene todo! Con este lanzamiento, Apple ha superado todos sus récords. Su diseño se destaca por sus líneas finas y distinguidas a partir de una sola hoja de vidrio resistente, combinada con aluminio de excelente calidad.",
+        "isNew": false,
+        " inSale": true,
+        "price": 10.770,
+        "discount": 30,
+        "image": "../public/img/cocina.webp",
+        "category": "cocina",
+        "target": "familia"
+    },
+    {
+        "id": 7,
+        "name": "Guitarra",
+        "description": "¡El nuevo smartphone que lo tiene todo! Con este lanzamiento, Apple ha superado todos sus récords. Su diseño se destaca por sus líneas finas y distinguidas a partir de una sola hoja de vidrio resistente, combinada con aluminio de excelente calidad.",
+        "isNew": false,
+        " inSale": true,
+        "price": 14.000,
+        "discount": 20,
+        "image": "../public/img/guitarra.webp",
+        "category": "arte",
+        "target": "adolescentes"
+    },
+    {
+        "id": 8,
+        "name": "Futbol",
+        "description": "¡El nuevo smartphone que lo tiene todo! Con este lanzamiento, Apple ha superado todos sus récords. Su diseño se destaca por sus líneas finas y distinguidas a partir de una sola hoja de vidrio resistente, combinada con aluminio de excelente calidad.",
+        "isNew": false,
+        " inSale": true,
+        "price": 6.800,
+        "discount": 50,
+        "image": "../public/img/futbol.webp",
+        "category": "deportes",
+        "target": "niños"
     }
-
 ]
-
-
-
