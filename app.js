@@ -1,5 +1,5 @@
 const express = require("express");
-const methodOverride = require("method-override"); // Pasar poder usar los métodos PUT y DELETE
+//const methodOverride = require("method-override"); // Pasar poder usar los métodos PUT y DELETE
 const path = require("path");
 
 const app = express();
@@ -25,9 +25,12 @@ app.use("/productDetail", indexRouter);
 app.use("/productIndex", indexRouter);
 app.use("/users", usersRouter);
 
+
 app.listen(3030, () => {
   console.log("Servidor funcionando");
 });
+
+//rutas productos
 
 /* app.get("/register", (req, res) => {
   res.sendFile(path.resolve("./views/register.html"));
