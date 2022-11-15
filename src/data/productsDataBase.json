@@ -1,0 +1,18 @@
+[
+ {
+    "id": 1, 
+    "name": "Cocina",
+    "description": "¡El nuevo smartphone que lo tiene todo! Con este lanzamiento, Apple ha superado todos sus récords. Su diseño se destaca por sus líneas finas y distinguidas a partir de una sola hoja de vidrio resistente, combinada con aluminio de excelente calidad.",
+    "isNew": true, 
+    " inSale" : false, 
+    "price": 148000,
+    "discount": 10,
+    "image": "../public/img/cocina.webp",
+    "category": "cocina",
+    "target": "niños"
+    }
+
+]
+
+
+
