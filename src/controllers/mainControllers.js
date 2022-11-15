@@ -19,6 +19,7 @@ const courses = [
   },
 ];
 
+
 const mainControllers = {
   index: (req, res) => {
     res.render("index", { mik: "ok" });
@@ -28,6 +29,21 @@ const mainControllers = {
     let course = courses.find((course) => course.id === idParam);
     res.render("productDetail", { mik: "ok", course });
   },
+  login: (req, res) => {
+    res.render('login');
+  },
+  register: (req, res) =>{
+    res.render('register');
+  },
+  productCart: (req, res) =>{
+    res.render('productCart');
+  },
+  productDetail: (req, res) =>{
+    res.render('productDetail');
+  },
+  productIndex: (req, res) =>{
+    res.render('productIndex');
+  }
 };
 
 module.exports = mainControllers;

@@ -14,6 +14,11 @@ const indexRouter = require("./src/routes/index");
 const usersRouter = require("./src/routes/users");
 
 app.use("/", indexRouter);
+app.use("/login", indexRouter);
+app.use("/register", indexRouter);
+app.use("/productCart", indexRouter);
+app.use("/productDetail", indexRouter);
+app.use("/productIndex", indexRouter);
 app.use("/users", usersRouter);
 
 app.listen(3030, () => {
