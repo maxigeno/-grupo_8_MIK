@@ -218,8 +218,10 @@ a{
 
 .check{
     display: flex;
-    align-items: center;
     padding: 10px;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
 
 }
 .check label{

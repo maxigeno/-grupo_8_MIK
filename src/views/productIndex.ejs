@@ -7,60 +7,70 @@
 <%- include('./partials/header')%>
 
 <main>
-    
-        <div class="cards">
-            <article class='card'>
-            <div class="card__container-img">
-                <img class="card__img" src="/static/img/pintura.webp" alt="Imagen Deportiva">
-            </div>
-            <div class="card__container-info">
-                <h4 class="card__name">CURSO DE PINTURA </h4>
-                <p class="card__description">Descripcion breve del curso</p>
-                <p class="card__price">$2.500</p>
-                <input class='boton' type="submit" value="Comprar">
-            </div>
-            </article>
+    <h3 class="title">Novedades</h3>
 
-            <article class='card' >
-            <div class="card__container-img">
-                <img class="card__img" src="/static/img/yoga.webp" alt="Imagen Deportiva">
-            </div>
-            <div class="card__container-info">
-                <h4 class="card__name"> CURSO DE YOGA</h4>
-                <p class="card_description">Descripcion breve del curso</p>
-                <p class="card__price">$11.770</p>
-                <input class='boton' type="submit" value="Comprar">
-            </div>
+  
+  
+    <section class="cards">
+        <% newCourse.forEach( product => { %>
+          <article class="card">
+              <div class="card__container-img">
+                  <img class="card__img" src="/static/img/<%=product.image%>" alt="Imagen Deportiva">
+              </div>
+              <div class="card__container-info">
+                  <p class="card__label-new">Nuevo</p>
+                  <h4 class="card__name"> <%= product.name %> </h4>
+                  <p class="card__price">$ <%= product.price %></p>
+                  <a class="card__btn" href="/product/<%=product.id%>">Ver mas <i class="fa-solid fa-arrow-right"></i></a>
+              </div>
+          </article>
+        <% }) %>
+  
+    </section> 
+  
+    <h3 class="title">Promociones</h3>
+  
+  
+    <section class="cards">
+      
+      <% inSale.forEach( product => { %>
+          <article class="card">
+              <div class="card__container-img">
+                  <img class="card__img" src="/static/img/<%= product.image %>" alt="Imagen Deportiva">
+              </div>
+              <div class="card__container-info">
+                  <p class="card__label-offer"><%=product.discount%>% OFF</p>
+                  <h4 class="card__name"><%= product.name %></h4>
+                  <div class="card__price-offer">
+                      <p class="card__price offer">$<%= product.price %></p>
+                      <p class="card__price color-offer">$ <%=calculateDiscount(product.price,product.discount ) %></p>
+                  </div>
+                  <a class="card__btn" href="/product/<%=product.id%>">Ver mas <i class="fa-solid fa-arrow-right"></i></a>
+              </div>
+        </article>
+        <% }) %>
+  
+    </section> 
 
-            </article>
+    <h3 class="title">Otros</h3>
 
-            <article class="card">
-            <div class='card__container-img'>
-                <img class="card__img" src="/static/img/natacion.webp" alt="Imagen Deportiva">
-            </div>
-            <div class="card__container-info">
-                <h4 class="card__name"> CURSO DE NATACIÓN </h4>
-                <p class="card__description">Descripcion breve del curso</p>
-                <p class="card__price">$9.770</p>
-                <input class='boton' type="submit" value="Comprar">
-            </div>
-            </article>
-
-            <article class='card'>
-            <div class="card__container-img">
-                <img class="card__img" src="/static/img/voleibal.webp" alt="Imagen Deportiva">
-            </div>
-            <div class="card__container-info">
-                <h4 class="card__name"> CURSO DE VOLEIBOL </h4>
-                <p class="card__description">Descripcion breve del curso</p>
-                <p class="card__price">$4.770</p>
-                <input class='boton' type="submit" value="Comprar">
-            </div>
-
-            </article>
-        </div>
-
-    </main>
+    <section class="cards">
+        <% others.forEach( product => { %>
+          <article class="card">
+              <div class="card__container-img">
+                  <img class="card__img" src="/static/img/<%=product.image%>" alt="Imagen Deportiva">
+              </div>
+              <div class="card__container-info">
+                  <p class="card__label-new">Nuevo</p>
+                  <h4 class="card__name"> <%= product.name %> </h4>
+                  <p class="card__price">$ <%= product.price %></p>
+                  <a class="card__btn" href="/product/<%=product.id%>">Ver mas <i class="fa-solid fa-arrow-right"></i></a>
+              </div>
+          </article>
+        <% }) %>
+  
+    </section>
+</main>
     <%- include('./partials/footer')%>
 
 </body>

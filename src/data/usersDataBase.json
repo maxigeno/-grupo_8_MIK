@@ -1,0 +1,30 @@
+[
+    {
+        "id": 1,
+        "name": "Carlos",
+        "lastName": "Gomez",
+        "mobile": "3574963509",
+        "email": "cgomez@gmail.com",
+        "password": "cdgomez123",
+        "birthday": "28 11 1968" 
+    },
+    {
+        "id": 2, 
+        "name": "Mariana",
+        "lastName": "Rodriguez",
+        "mobile": "3895567810",
+        "email": "amrodriguezs@gmail.com",
+        "password": "Rodriguez1@",
+        "birthday": "15 08 1993"
+    },
+    {
+        "id": 3,
+        "name": "Isabela",
+        "lastName": "Cuellar",
+        "mobile": "3907541239",
+        "email": "isabelacuellar09@gmail.com",
+        "password": "0901cuellar",
+        "birthday": "09 01 1998"
+    }
+
+]
