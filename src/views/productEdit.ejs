@@ -14,19 +14,19 @@
 			</div>
 		</div>
 		<div class="col-12">
-			<form action="/products/edit/<%= productToEdit.id %>?_method=PATCH"" method="POST">
+			<form action="/products/edit/<%= productToEdit.id %> ?_method=PATCH"" method="POST" enctype="multipart/form-data">
 				<div class="form-register">
 					<div class="controls">
 						<label for="name" class="form-label">Nombre del producto:</label>
-						<input type="text" id="name" name="name" placeholder="Ej: Natación para niños" class="form-input">
+						<input type="text" id="name" name="name" value="<%= productToEdit.name %> " placeholder="Ej: Natación para niños" class="form-input">
 					</div>
 					<div class="controls">
 						<label for="price" class="form-label">Precio del producto:</label>
-						<input type="number" id="price" name="price" placeholder="Ej: 5678" class="form-input">
+						<input type="number" id="price" name="price" value="<%= productToEdit.price %>" placeholder="Ej: 5678" class="form-input">
 					</div>
 					<div class="controls">
 						<label for="discount" class="form-label">Descuento:</label>
-						<input type="number" id="discount" name="discount" placeholder="Ej: 15" class="form-input">
+						<input type="number" id="discount" name="discount" value="<%= productToEdit.discount %>" placeholder="Ej: 15" class="form-input">
 					</div>
                     <div class="check">
                         <label for="target" class="form-label">Target:</label>
@@ -61,6 +61,7 @@
 						<label for="description" class="form-label">Descipción:</label>
 						<textarea name="description" id="description"><%= productToEdit.description %></textarea>
 					</div>
+                    <input class="controls" type="file" name="image" id="image">
 					<div class="boton">
 						<button type="submit" class="buy-now-button">Guardar producto</button>
 					</div>

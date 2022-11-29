@@ -14,7 +14,7 @@
 			</div>
 		</div>
 		<div class="col-12">
-			<form action="/products" method="POST">
+			<form action="/products" method="POST" enctype="multipart/form-data">
 				<div class="form-register">
 					<div class="controls">
 						<label for="name" class="form-label">Nombre del producto:</label>
@@ -50,9 +50,9 @@
                         </select>
                     </div>
                     <div class="check">
-                        <label for="isNew">Es nuevo</label>
-                        <label for="isNew">Si</label><input type="radio" id="isNew" name="isNew" value=true>
-                        <label for="isNew">No</label><input type="radio" id="isNew" name="isNew" value=false>
+                        <label for="isNew" >Es nuevo</label>
+                        <label for="isNew">Si</label><input type="radio" id="isNew" name="isNew" value="true">
+                        <label for="isNew">No</label><input type="radio" id="isNew" name="isNew" value="false">
                         <label for="inSale">Esta en descuento</label>
                         <label for="inSale">Si</label><input type="radio" id="inSale" name="inSale" value=true>
                         <label for="inSale">No</label><input type="radio" id="inSale" name="inSale" value=false>
@@ -61,6 +61,7 @@
 						<label for="description" class="form-label">Descipción:</label>
 						<textarea name="description" id="description" class="form-input"></textarea>
 					</div>
+                    <input class="controls" type="file" name="image" id="image">
 					<div class="boton">
 						<button type="submit" class="buy-now-button">Guardar producto</button>
 					</div>

@@ -27,7 +27,7 @@
                 <p class="card__label-new">Nuevo</p>
                 <h4 class="card__name"> <%= product.name %> </h4>
                 <p class="card__price">$ <%= product.price %></p>
-                <a class="card__btn" href="/product/<%=product.id%>">Ver mas <i class="fa-solid fa-arrow-right"></i></a>
+                <a class="card__btn" href="/products/<%=product.id%>">Ver mas <i class="fa-solid fa-arrow-right"></i></a>
             </div>
         </article>
       <% }) %>
@@ -51,7 +51,7 @@
                     <p class="card__price offer">$<%= product.price %></p>
                     <p class="card__price color-offer">$ <%=calculateDiscount(product.price,product.discount ) %></p>
                 </div>
-                <a class="card__btn" href="/product/<%=product.id%>">Ver mas <i class="fa-solid fa-arrow-right"></i></a>
+                <a class="card__btn" href="/products/<%=product.id%>">Ver mas <i class="fa-solid fa-arrow-right"></i></a>
             </div>
       </article>
       <% }) %>
