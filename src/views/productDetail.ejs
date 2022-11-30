@@ -1,14 +1,14 @@
 <!DOCTYPE html>
 <html lang="es">
     <%- include('./partials/head')%>
-        <link rel="stylesheet" href="/static/css/productDetail.css">
+        <link rel="stylesheet" href="/static/css/app.css">
     </head>
     <body>
         <%- include('./partials/header')%>
         <br><br>
 
         <main>
-           
+            <div class="details">
                 <article class="product_details">
                     <div class="product_img">
                         <img class="card__img" src="/static/img/<%=product.image%>" alt="Imagen Deportiva">
@@ -48,16 +48,16 @@
                         <p class="description">
                             <%=product.description%>
                             <br><br>
-                            Este curso consta de 4 sesiones de 1 hora cada una, dirigido para niños de 4 a 8 años. 
                         </p>
                     </div>
     
                 </article>
-                <a href="/products/edit/<%= product.id %>" class="action-button edit">EDITAR PRODUCTO</a>
+                <div class="deleteAndEdit">
+                <a href="/products/edit/<%= product.id %>" class="edit-button">EDITAR PRODUCTO</a>
                 <form action="/products/delete/<%= product.id %>?_method=DELETE" method="POST" style="display: inline-flex">
-                <button type="submit" class="action-button delete">ELIMINAR</button>
-
-
+                <button type="submit" class="detele-button">ELIMINAR</button>
+                </div>
+            </div>
         </main>
 
         <%- include('./partials/footer')%>

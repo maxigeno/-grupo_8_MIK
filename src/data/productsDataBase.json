@@ -25,15 +25,15 @@
  },
  {
   "id": 3,
-  "name": "Stand Up comedy con Liss",
+  "name": "Stand Up comedy con Liss Pereira",
+  "price": "20770",
+  "discount": "0",
+  "target": "",
+  "category": "",
   "description": "Liss llega a MIK con un monólogo que nos cuenta desde su perspectiva todos los retos que afrontan las mujeres en sus papeles como esposas, madres, profesionales, entre otros. Este espacio tiene como objeto la entretención de los adultos y unos tips en caso de que quieran empezar en el mundo de la comedia.",
-  "isNew": true,
+  "isNew": false,
   "inSale": false,
-  "price": 20770,
-  "discount": 0,
-  "image": "stand-up.webp",
-  "category": "stand-up",
-  "target": "adultos"
+  "image": "default-image.png"
  },
  {
   "id": 4,

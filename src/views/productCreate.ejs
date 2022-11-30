@@ -1,34 +1,35 @@
 <!DOCTYPE html>
 <html lang="es">
 <%- include('./partials/head')%>
-    <link rel="stylesheet" href="/static/css/register.css">
+    <!-- <link rel="stylesheet" href="/static/css/register.css"> -->
+    <link rel="stylesheet" href="/static/css/app.css">
 </head>
 <body>
 <%- include('./partials/header')%>
 
 <main>
-    <div class="container products-wrapper">
-		<div class="row">
-			<div class="col-12">
+    <div class="create-form">
+		<div class="form-title">
+			<div class="">
 				<h2 class="products-title">Formulario de creación de productos</h2>
 			</div>
 		</div>
-		<div class="col-12">
+		<div class="form-body">
 			<form action="/products" method="POST" enctype="multipart/form-data">
-				<div class="form-register">
-					<div class="controls">
+				<div class="form-create">
+					<div class="items">
 						<label for="name" class="form-label">Nombre del producto:</label>
 						<input type="text" id="name" name="name" placeholder="Ej: Natación para niños" class="form-input">
 					</div>
-					<div class="controls">
+					<div class="items">
 						<label for="price" class="form-label">Precio del producto:</label>
 						<input type="number" id="price" name="price" placeholder="Ej: 5678" class="form-input">
 					</div>
-					<div class="controls">
+					<div class="items">
 						<label for="discount" class="form-label">Descuento:</label>
 						<input type="number" id="discount" name="discount" placeholder="Ej: 15" class="form-input">
 					</div>
-                    <div class="check">
+                    <div class="items">
                         <label for="target" class="form-label">Target:</label>
                         <select name="target" id="target" class="form-input">
                             <option value="">Elegí</option>
@@ -38,8 +39,8 @@
                             <option value="bebes">Bebés</option>
                         </select>
                     </div>
-                    <div class="check">
-                        <label for="category" class="form-label">Categorias</label>
+                    <div class="items">
+                        <label for="category" class="form-label">Categorias:</label>
                         <select name="category" id="category" class="form-input">
                             <option value="">Elegí</option>
                             <option value="arte">Arte</option>
@@ -49,21 +50,24 @@
                             <option value="motricidad">Motricidad</option>
                         </select>
                     </div>
-                    <div class="check">
-                        <label for="isNew" >Es nuevo</label>
-                        <label for="isNew">Si</label><input type="radio" id="isNew" name="isNew" value="true">
-                        <label for="isNew">No</label><input type="radio" id="isNew" name="isNew" value="false">
-                        <label for="inSale">Esta en descuento</label>
-                        <label for="inSale">Si</label><input type="radio" id="inSale" name="inSale" value=true>
-                        <label for="inSale">No</label><input type="radio" id="inSale" name="inSale" value=false>
+                    <div class="newOrSale">
+                        <label for="isNew" class="form-label" >Es nuevo:</label>
+                        <label for="isNew" class="radio-option">Si</label><input type="radio" id="isNew" name="isNew" value="true">
+                        <label for="isNew" class="radio-option">No</label><input type="radio" id="isNew" name="isNew" value="false">
+                        <label for="inSale" class="form-label">Esta en descuento:</label>
+                        <label for="inSale" class="radio-option">Si</label><input type="radio" id="inSale" name="inSale" value=true>
+                        <label for="inSale" class="radio-option">No</label><input type="radio" id="inSale" name="inSale" value=false>
                     </div>
-					<div class="controls">
+					<div class="form-description">
 						<label for="description" class="form-label">Descipción:</label>
 						<textarea name="description" id="description" class="form-input"></textarea>
 					</div>
-                    <input class="controls" type="file" name="image" id="image">
-					<div class="boton">
-						<button type="submit" class="buy-now-button">Guardar producto</button>
+                    <div class="product-img">
+                        <label for="category" class="form-label">Inserte una imagen:</label>
+                        <input type="file" name="image" id="image">
+                    </div>
+					<div class="boton-guardar">
+						<button type="submit" class="save-button">Guardar producto</button>
 					</div>
 				</div>
 			</form>
