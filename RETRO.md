@@ -13,6 +13,7 @@
 *Realizar meetings en las que se hable del avance que se lleva hasta el momento. 
 *Leer el PDF sobre las consignas en las reuniones
 *Preguntar ante cualquier duda sobre el proyecto y sus respectivas tareas a los compañeros del equipo
+*Realizar mas consultas a los profes por dudas del sprint
 
 ## Continuar haciendo
 
@@ -21,6 +22,7 @@
 *Meetings en las cuales se hable sobre el avance.
 *Comunicacion efectiva entre los integrantes.
 *Mantener la comunicacion de manera constante en caso de cambios 
+*Ayudar a cada compañero a poder lograr el objetivo de su tarea en el sprint en caso de que no logre hacerlo.
 
 
 
