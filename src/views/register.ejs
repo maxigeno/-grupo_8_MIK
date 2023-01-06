@@ -9,7 +9,7 @@
 <main>
     <section class="form-register">
         <h3>Formulario de registro</h3>
-        <form action="/" method="POST">
+        <form action="/user" method="POST" enctype="multipart/form-data">
         <input class="controls" type="text" name="nombres" id="nombres" placeholder="Nombre">
         <input class="controls" type="text" name="apellidos" id="apellido" placeholder="Apellido"><br>
         <input class="controls" type="tel" name="telefono" id="telefono" placeholder="Número de celular"><br>
@@ -22,6 +22,10 @@
         <div class="check">  
             <input  type="checkbox" name="tratamientoDatos">
             <label for="tratamientoDatos">Estoy de acuerdo con los terminos y condiciones</label>
+        </div>
+        <div class="product-img">
+            <label for="category" class="form-label">Inserte una imagen:</label>
+            <input type="file" name="image" id="image">
         </div>
         <button class="boton" type="submit"><a class="registrarme" href='login'> Registrarme</a></button>
         <button class="boton" type="reset"><a class="cancelar" href='/'> Cancelar </a></button>

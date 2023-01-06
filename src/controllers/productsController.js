@@ -13,7 +13,7 @@ const productsControllers = {
   // Root - Show all products
   products: (req, res) => {
     let newCourse = products.filter((product) => product.isNew == true);
-    console.log(newCourse, newCourse);
+
     let inSale = products.filter((product) => product.inSale == true);
     let others = products.filter(
       (product) => product.isNew == false && product.inSale == false
