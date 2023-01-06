@@ -2,3 +2,5 @@
 Justamente la reunion del miercoles 2-11-2022 pasado logramos organizarnos para empezar de una manera productiva y uniforme nuestras tareas para lograr terminarlas a tiempo. Pudimos repartir las tareas entre Maxi, Kata e Ivan de una forma la cual todos colaboremos de una manera con el otro, ya que vimos que necesitabamos avanzar de una manera efectiva entendiendo lo que codeabamos. 
 
 -Hasta la fecha del dia 16-11-2022 el equipo viene desempeñandose de una manera muy buena y logrando los objetivos de cada sprint. Para recalcar algo muy bueno es la comunicacion y la ayuda entre el equipo para explicar temas y poder hacer que tu compañero entienda sobre el tema y pueda en un futuro arreglarselas solo. 
+
+-Al dia de la fecha 7/12/2022 el equipo viene logrando todo lo propuesto. Cada integrante se complementa con el otro para poder realizar cada tarea en cada sprint, desde lo mas basico a lo mas complejo. 
