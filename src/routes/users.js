@@ -6,6 +6,8 @@ const { body } = require("express-validator");
 
 // ************ Requiero middleware custom ************
 const validateRegister = require("../middlewares/validateRegister");
+const validateLogin = require("../middlewares/validateLogin");
+const guestMiddleware = require("../middlewares/guestMiddleware");
 
 // ************ Requiero el controlador ************
 const usersControllers = require("../controllers/usersControllers");
@@ -24,12 +26,14 @@ const storage = multer.diskStorage({
 });
 const upload = multer({ storage });
 
-/***LOGIN USER ***/
-router.get("/login", usersControllers.login);
-router.post("/login", usersControllers.procesLogin);
+//Form Ligin
+router.get("/login", guestMiddleware, usersControllers.login);
+//Procesar Login
+router.post("/login", validateLogin, usersControllers.procesLogin);
 
-/*** CREATE USER ***/
-router.get("/register", usersControllers.register);
+//Form Register
+router.get("/register", guestMiddleware, usersControllers.register);
+//Procesar Register
 router.post(
   "/",
   upload.single("image"),

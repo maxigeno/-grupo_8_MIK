@@ -17,7 +17,8 @@
                </a>
                <a href="users/login" class="icon__container">
                 <i class="fa-regular fa-circle-user icon"></i>
-                <span>Iniciar Sesión</span>
+               <!--  <span> Iniciar Sesión </span> -->
+                <span><%= sesion.userLogged ? sesion.userLogged.email : "Iniciar Sesión" %>  </span>
                </a>
         </div>
 

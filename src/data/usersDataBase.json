@@ -1,28 +1,20 @@
 [
  {
   "id": 1,
-  "nombres": "Maximiliano",
-  "apellidos": "Genolet",
-  "email": "maxistafe008@gmail.com",
-  "password": "$2a$10$rTVY2P2cBSWkvDfR59dy1.OuRJaotd5b.SHlun2QFaFebkK8XqWFe",
-  "tratamientoDatos": "on",
-  "image": "image-1675008174019.jpg"
+  "first_name": "Maximiliano",
+  "last_name": "Genolet",
+  "email": "maxi@g.com",
+  "password": "$2a$10$Z6KS9ADLWIKgpZFzase3PuYEQzXdeQ4jo3PdtBfUtEyryiUj0e3XG",
+  "confirmPassword": "1234567a",
+  "image": "default-image.png"
  },
  {
   "id": 2,
-  "first_name": "julia",
-  "last_name": "rio",
-  "email": "maxistafe008@gmail.com",
-  "password": "$2a$10$f5g0PEt6bkykcYXTXyJAGuL4CJaYTpsm/WyxKkE/4WoHJzoRTkXVW",
-  "tratamientoDatos": "on",
-  "image": "default-image.png"
- },
- {
-  "id": 3,
   "first_name": "Maximiliano",
   "last_name": "Genolet",
   "email": "maxistafe008@gmail.com",
-  "password": "$2a$10$Ix3TKx2grj9cPUzVp6NA9efw.tRYEEvlYTEpzB8rx5SyY7uq5Hxyq",
-  "image": "default-image.png"
+  "password": "$2a$10$8hqJqS/QyfNNcePVer5rxu.JytwyLItcwgGelgSd0FpUsibpZJgLi",
+  "confirmPassword": "1234567a",
+  "image": "image-1675035144798.png"
  }
 ]

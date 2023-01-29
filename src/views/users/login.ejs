@@ -4,16 +4,36 @@
     <link rel="stylesheet" href="/static/css/app.css">
 </head>
 <body>
-<%- include('../partials/header')%>
+<%- include('../partials/header',{ sesion  })%>
 
 <main>
     <section class="form-register">
         <h3>Iniciar sesión</h3>
-        <form action="/user/login" method="POST">
-            <p><%= msg %></p>
-            <input class="controls" type="email" name="email" id="email" placeholder="Correo electrónico"><br>
-            <input class="controls" type="password" name="password" id="password" placeholder="Ingrese una contraseña"><br>
-           <!--  <button class="boton" type="submit"><a class="Ingresar" href='/'>Ingresar</button> -->
+
+        <% if ( locals.invalidCredentials !== undefined) { %>
+            <div class="alert alert-danger" role="alert"">
+                <%= invalidCredentials %> 
+            </div>
+        <% } %> 
+        <form action="/users/login" method="POST">
+           <!-- email -->
+            <input class="controls" type="email" name="email" id="email" placeholder="Correo electrónico" value="<%= locals.old && old.email ? old.email : '' %>">
+
+            <% if (locals.errors && errors.email) { %>
+                <div class="alert alert-danger" role="alert"">
+                    <%= errors.email.msg %> 
+                </div>
+            <% } %>    
+
+            <!-- password -->
+            <input class="controls" type="password" name="password" id="password" placeholder="Ingrese una contraseña">
+
+            <% if (locals.errors && errors.password) { %>
+                <div class="alert alert-danger" role="alert"">
+                    <%= errors.password.msg %> 
+                </div>
+            <% } %>   
+
             <button class="boton" type="submit">Ingresar</button>
            
         </form>
