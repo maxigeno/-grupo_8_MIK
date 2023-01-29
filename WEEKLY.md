@@ -3,4 +3,6 @@ Justamente la reunion del miercoles 2-11-2022 pasado logramos organizarnos para 
 
 -Hasta la fecha del dia 16-11-2022 el equipo viene desempeñandose de una manera muy buena y logrando los objetivos de cada sprint. Para recalcar algo muy bueno es la comunicacion y la ayuda entre el equipo para explicar temas y poder hacer que tu compañero entienda sobre el tema y pueda en un futuro arreglarselas solo. 
 
--Al dia de la fecha 7/12/2022 el equipo viene logrando todo lo propuesto. Cada integrante se complementa con el otro para poder realizar cada tarea en cada sprint, desde lo mas basico a lo mas complejo. 
+-Al dia de la fecha 7/12/2022 el equipo viene logrando todo lo propuesto. Cada integrante se complementa con el otro para poder realizar cada tarea en cada sprint, desde lo mas basico a lo mas complejo.
+
+-Empezando ya el año al dia 14-01-2023 el equipo se encontro con algunas dificultades a la hora de realizar algunas partes del sprint, logramos resolverlo de una manera rapida y creemos de la mejor manera con la mejor eleccion en toma de decisiones. 

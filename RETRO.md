@@ -3,10 +3,12 @@
 ## Dejar de hacer
 
 *Dejar las tareas para último momento
+*No avisar nada sii hacen algo o no
 
 ## Comenzar a hacer
 
 *Distribuir el trabajo en equipo de manera equitativa y que cada persona entienda que debe hacer. Adicionalmente analizar las tareas antes de empezar a hacerlas. 
+*Avisar si se comprometen de verdad o no
 
 ## Hacer más
 
@@ -14,6 +16,7 @@
 *Leer el PDF sobre las consignas en las reuniones
 *Preguntar ante cualquier duda sobre el proyecto y sus respectivas tareas a los compañeros del equipo
 *Realizar mas consultas a los profes por dudas del sprint
+*Comunicacion sin verguenza
 
 ## Continuar haciendo
 
@@ -23,6 +26,7 @@
 *Comunicacion efectiva entre los integrantes.
 *Mantener la comunicacion de manera constante en caso de cambios 
 *Ayudar a cada compañero a poder lograr el objetivo de su tarea en el sprint en caso de que no logre hacerlo.
+*Resolver los problemas con la mejor actitud y seguir para adelante
 
 
 
