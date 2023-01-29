@@ -18,7 +18,13 @@ const productsControllers = {
     let others = products.filter(
       (product) => product.isNew == false && product.inSale == false
     );
-    res.render("index", { newCourse, inSale, others, calculateDiscount });
+    res.render("index", {
+      newCourse,
+      inSale,
+      others,
+      calculateDiscount,
+      user: req.session.userLogged,
+    });
   },
   // Detail
   detail: (req, res) => {

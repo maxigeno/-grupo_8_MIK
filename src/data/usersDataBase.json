@@ -1,61 +1,28 @@
 [
  {
   "id": 1,
-  "name": "Carlos",
-  "lastName": "Gomez",
-  "mobile": "3574963509",
-  "email": "cgomez@gmail.com",
-  "password": "cdgomez123",
-  "birthday": "28 11 1968"
+  "nombres": "Maximiliano",
+  "apellidos": "Genolet",
+  "email": "maxistafe008@gmail.com",
+  "password": "$2a$10$rTVY2P2cBSWkvDfR59dy1.OuRJaotd5b.SHlun2QFaFebkK8XqWFe",
+  "tratamientoDatos": "on",
+  "image": "image-1675008174019.jpg"
  },
  {
   "id": 2,
-  "name": "Mariana",
-  "lastName": "Rodriguez",
-  "mobile": "3895567810",
-  "email": "amrodriguezs@gmail.com",
-  "password": "Rodriguez1@",
-  "birthday": "15 08 1993"
+  "first_name": "julia",
+  "last_name": "rio",
+  "email": "maxistafe008@gmail.com",
+  "password": "$2a$10$f5g0PEt6bkykcYXTXyJAGuL4CJaYTpsm/WyxKkE/4WoHJzoRTkXVW",
+  "tratamientoDatos": "on",
+  "image": "default-image.png"
  },
  {
   "id": 3,
-  "name": "Isabela",
-  "lastName": "Cuellar",
-  "mobile": "3907541239",
-  "email": "isabelacuellar09@gmail.com",
-  "password": "0901cuellar",
-  "birthday": "09 01 1998"
- },
- {
-  "id": 4,
-  "nombres": "julia",
-  "apellidos": "rio",
-  "telefono": "0342155024176",
+  "first_name": "Maximiliano",
+  "last_name": "Genolet",
   "email": "maxistafe008@gmail.com",
-  "password": "123456",
-  "fechanacimiento": "1987-08-22",
-  "tratamientoDatos": "on",
-  "image": "image-1671579202756.png"
- },
- {
-  "id": 5,
-  "nombres": "Maximiliano",
-  "apellidos": "Genolet",
-  "telefono": "0342155024176",
-  "email": "maxistafe008@gmail.com",
-  "password": "123456",
-  "fechanacimiento": "1987-08-22",
-  "tratamientoDatos": "on",
-  "image": "image-1671579246644.png"
- },
- {
-  "id": 6,
-  "nombres": "maximiliano",
-  "apellidos": "Genolet",
-  "telefono": "3491539750",
-  "email": "maxistafe008@gmail.com",
-  "password": "2023",
-  "fechanacimiento": "2023-01-05",
+  "password": "$2a$10$Ix3TKx2grj9cPUzVp6NA9efw.tRYEEvlYTEpzB8rx5SyY7uq5Hxyq",
   "image": "default-image.png"
  }
 ]
