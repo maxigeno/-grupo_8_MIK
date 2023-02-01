@@ -22,6 +22,13 @@ app.use("/", indexRouter);
 app.use("/user", usersRouter);
 app.use("/products", productsRouter);
 
+//Definicion de los parametros de la base de datos
+
+const sequelize= new sequelize('mik_db','root','',{
+  host:'localhost 3030',
+  dialect: 'mysql',
+}) 
+
 app.listen(3030, () => {
   console.log("Servidor funcionando");
 });
