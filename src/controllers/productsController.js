@@ -23,18 +23,17 @@ const productsControllers = {
       inSale,
       others,
       calculateDiscount,
-      sesion: req.session,
     });
   },
   // Detail
   detail: (req, res) => {
     let id = req.params.id;
     let product = products.find((product) => product.id == id);
-    res.render("productDetail", { product, sesion: req.session });
+    res.render("productDetail", { product });
   },
   // Create Form
   create: (req, res) => {
-    res.render("productCreate", { sesion: req.session });
+    res.render("productCreate");
   },
   // Create Method POST
   store: (req, res) => {
@@ -61,7 +60,7 @@ const productsControllers = {
   edit: (req, res) => {
     let id = req.params.id;
     let productToEdit = products.find((product) => product.id == id);
-    res.render("productEdit", { productToEdit, sesion: req.session });
+    res.render("productEdit", { productToEdit });
   },
   // Update - Method to update
   update: (req, res) => {

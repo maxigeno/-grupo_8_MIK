@@ -40,6 +40,9 @@ router.post(
   validateRegister,
   usersControllers.newUSer
 );
+//logout
+router.get("/logout", usersControllers.logout);
+
 /* 
 router.get("/cart", usersControllers.cart); */
 

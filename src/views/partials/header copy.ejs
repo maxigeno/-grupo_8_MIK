@@ -9,40 +9,18 @@
         <a href="/" class="logo__container">
                <img class="logo__img" src="/static/img/Logo_MIK.png" alt="logo Mik">
         </a>
-
-        <!-- Si esta autenticado muestro -->
-        <% if (locals.isLogged) { %>
-            <div class="icons__container">
-                   <a href="users/cart" class="icon__container">
-                       <i class="fa-solid fa-cart-shopping icon"></i>
-                       <span>Comprar</span>
-                   </a>
-                   <a href="users/login" class="icon__container">
-                    <i class="fa-regular fa-circle-user icon"></i> 
-                    <span> <%= locals.userLogged.email %> </span>
-                   </a>
-                   <a href="users/logout" class="icon__container">
-                    <i class="fas fa-sign-out-alt" icon"></i> 
-                    <span>Cerrar Sesión</span>
-                   </a>
-            </div>
-        <% } else  { %>
-            <!-- Si no esta autenticado muestro -->
-            <div class="icons__container">
-                    <a href="users/cart" class="icon__container">
-                        <i class="fa-solid fa-cart-shopping icon"></i>
-                        <span>Comprar</span>
-                    </a>
-                    <a href="users/login" class="icon__container">
-                    <i class="fa-regular fa-circle-user icon"></i>
-                    <!--  <span> Iniciar Sesión </span> -->
-                    <span>Iniciar Sesión</span>
-                    </a>
-            </div>
-
-        <% } %>
-         
     
+        <div class="icons__container">
+               <a href="users/cart" class="icon__container">
+                   <i class="fa-solid fa-cart-shopping icon"></i>
+                   <span>Comprar</span>
+               </a>
+               <a href="users/login" class="icon__container">
+                <i class="fa-regular fa-circle-user icon"></i>
+               <!--  <span> Iniciar Sesión </span> -->
+                <span><%= sesion.userLogged ? sesion.userLogged.email : "Iniciar Sesión" %>  </span>
+               </a>
+        </div>
 
     </div>
     <!-- BARRA DE BUSQUEDA -->

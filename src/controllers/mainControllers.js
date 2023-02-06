@@ -11,15 +11,14 @@ const calculateDiscount = (price, discountPer) => {
 
 const mainControllers = {
   index: (req, res) => {
-    console.log("desde el home", req.session);
+    // console.log(req.cookies.userEmail);
+    //console.log("desde el home", req.session);
     let newCourse = products.filter((product) => product.isNew === true);
     let inSale = products.filter((product) => product.inSale === true);
     res.render("index", {
       newCourse,
       inSale,
       calculateDiscount,
-      //mandamos la variable userLogged a la vista
-      sesion: req.session,
     });
   },
 };

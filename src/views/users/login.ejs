@@ -4,7 +4,7 @@
     <link rel="stylesheet" href="/static/css/app.css">
 </head>
 <body>
-<%- include('../partials/header',{ sesion  })%>
+<%- include('../partials/header')%>
 
 <main>
     <section class="form-register">
@@ -33,6 +33,12 @@
                     <%= errors.password.msg %> 
                 </div>
             <% } %>   
+
+               <!-- recordar email -->
+                 <div class="check">  
+                    <input  type="checkbox" name="remember_user">
+                    <label for="tratamientoDatos">Recordar usuario</label>
+                </div>
 
             <button class="boton" type="submit">Ingresar</button>
            

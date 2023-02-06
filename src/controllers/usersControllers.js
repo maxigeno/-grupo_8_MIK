@@ -11,7 +11,7 @@ const { ok } = require("assert");
 const usersControllers = {
   login: (req, res) => {
     console.log(req.session);
-    res.render("users/login", { sesion: req.session });
+    res.render("users/login");
   },
   procesLogin: (req, res) => {
     //valido los datos del form
@@ -39,9 +39,9 @@ const usersControllers = {
       //console.log(req.session);
 
       //si el usuario marco la opcion de recordarme, guardo el email en una cookie
-      /*  if (req.body.remember_user) {
+      if (req.body.remember_user) {
         res.cookie("userEmail", req.body.email, { maxAge: 1000 * 60 * 60 });
-      } */
+      }
 
       //redirijo al home
       return res.redirect("/");
@@ -55,7 +55,7 @@ const usersControllers = {
     }
   },
   register: (req, res) => {
-    res.render("./users/register", { sesion: req.session });
+    res.render("./users/register");
   },
   newUSer: (req, res) => {
     let errors = validationResult(req);
@@ -97,6 +97,14 @@ const usersControllers = {
         old: req.body,
       });
     }
+  },
+  logout: (req, res) => {
+    //elimino la cookie
+    res.clearCookie("userEmail");
+    //elimino el usuario de session
+    req.session.destroy();
+    //redirijo al home
+    res.redirect("/");
   },
 };
 
