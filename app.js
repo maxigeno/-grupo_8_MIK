@@ -1,6 +1,7 @@
 const express = require("express");
 const methodOverride = require("method-override"); // Pasar poder usar los métodos PUT y DELETE
 const path = require("path");
+const sequelize = require("sequelize");
 
 const app = express();
 
@@ -24,10 +25,10 @@ app.use("/products", productsRouter);
 
 //Definicion de los parametros de la base de datos
 
-const sequelize= new sequelize('mik_db','root','',{
-  host:'localhost 3030',
+const db = new sequelize('mik_db','root','',{
+  host:'localhost',
   dialect: 'mysql',
-}) 
+});
 
 app.listen(3030, () => {
   console.log("Servidor funcionando");
