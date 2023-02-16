@@ -5,8 +5,12 @@ const { validationResult } = require("express-validator");
 
 //const usersFilePath = path.join(__dirname, "../data/usersDataBase.json");
 //const users = JSON.parse(fs.readFileSync(usersFilePath, "utf-8"));
+//const { ok } = require("assert");
+
 const USer = require("../models/User");
-const { ok } = require("assert");
+//const db = require("../database/models");
+const db = require("./../database/models").USer;
+
 
 const usersControllers = {
   login: (req, res) => {
@@ -83,11 +87,23 @@ const usersControllers = {
       }
 
       let newUser = {
-        ...req.body,
+        //...req.body,
+        nombre: req.body.first_name,
+        apellido: req.body.last_name,
+        email : req.body.email,
         password: bcrypt.hashSync(req.body.password, 10),
-        image,
+        avatar: image,
+
       };
-      USer.create(newUser);
+      console.log("newUser" , newUser);
+      db.create({
+        nombre: req.body.first_name,
+        apellido: req.body.last_name,
+        email : req.body.email,
+        password: bcrypt.hashSync(req.body.password, 10),
+        avatar: image,
+      
+      });
       res.redirect("users/login");
       //si hay errores, renderizo el form con los errores y los datos que ya habia ingresado el usuario
     } else {

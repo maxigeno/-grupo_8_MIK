@@ -12,7 +12,7 @@ const calculateDiscount = (price, discountPer) => {
 
 const mainControllers = {
   index: (req, res) => {
-    db.Product.findAll().then((data) => {
+    db.User.findAll().then((data) => {
       console.log("data", data);
     });
     // console.log(req.cookies.userEmail);
