@@ -9,7 +9,7 @@ const { validationResult } = require("express-validator");
 
 const USer = require("../models/User");
 //const db = require("../database/models");
-const db = require("./../database/models").USer;
+const db = require("./../database/models");
 
 
 const usersControllers = {
@@ -96,14 +96,17 @@ const usersControllers = {
 
       };
       console.log("newUser" , newUser);
-      db.create({
+      db.User.findAll().then((data) => {
+        console.log("data", data);
+      });
+      /* db.create({
         nombre: req.body.first_name,
         apellido: req.body.last_name,
         email : req.body.email,
         password: bcrypt.hashSync(req.body.password, 10),
         avatar: image,
       
-      });
+      }); */
       res.redirect("users/login");
       //si hay errores, renderizo el form con los errores y los datos que ya habia ingresado el usuario
     } else {
