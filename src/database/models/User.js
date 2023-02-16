@@ -6,19 +6,45 @@ module.exports = (sequelize, dataTypes) => {
           primaryKey: true,
           autoIncrement: true
       },
-      firstName: dataTypes.STRING,
-      lastName: dataTypes.STRING,
-      email: dataTypes.STRING,
-      password: dataTypes.STRING,
+      nombre: {
+            type: dataTypes.STRING,
+            allowNull: false
+        },
+      apellido: {
+            type: dataTypes.STRING,
+            allowNull: false
+        },
+      email:{
+            type: dataTypes.STRING,
+            allowNull: false
+        },
+      password: {
+            type: dataTypes.STRING,
+            allowNull: false,
+        },
       avatar: dataTypes.STRING,
-      role: dataTypes.INTEGER
+            
+      rol: {
+            type: dataTypes.STRING,
+            allowNull: false    
+        },
   };
-  /*let config = {
-      tableName: 'users',
-      timestamps: false
-  };*/
+  let config = {
+        tableName: 'usuarios',
+        timestamps: false,
+        underscored: true
+  };
       
   
-  const User = sequelize.define(alias, cols)
+  const User = sequelize.define(alias, cols, config)
+  User.associate = function(models){
+    User.belongsToMany(models.Product,{
+      as : 'pedidos',
+      through : 'pedido_detalle',
+      foreignKey : 'usuario_id',
+      otherKey : 'producto_id',
+      timestamps : false
+    });
+  }
   return User;
 }

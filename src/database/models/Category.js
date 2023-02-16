@@ -7,19 +7,23 @@ module.exports = (sequelize,DataTypes) => {
             autoIncrement: true,
             allowNull : false
         },
-        name: DataTypes.STRING,
+        nombre:{
+            type: DataTypes.STRING,
+            allowNull : false
+        }
     }
-    /*
+    
     let config ={
-        tableName: 'products',
-        timestamps: true
+        tableName: 'categorias',
+        timestamps: false,
+        underscored: true
     }
-    */
-    const Category = sequelize.define(alias, cols);
+   
+    const Category = sequelize.define(alias, cols, config);
     Category.associate = function(models){
         Category.hasMany(models.Product, {
-            as : 'products',
-            foreignKey : 'categoryId'
+            as : 'productos',
+            foreignKey : 'categoria_id'
         })
     }
     return Category;

@@ -1,3 +1,5 @@
+const { BelongsToMany } = require("sequelize");
+
 module.exports = (sequelize,DataTypes) => {
     let alias = 'Product';
     let cols = {
@@ -7,26 +9,70 @@ module.exports = (sequelize,DataTypes) => {
             autoIncrement: true,
             allowNull : false
         },
-        name: DataTypes.STRING,
-        description: DataTypes.STRING,
-        price : DataTypes.DECIMAL,
-        discount: DataTypes.INTEGER,
-        image: DataTypes.STRING,
-        categoryId: DataTypes.INTEGER
+        nombre:{
+            type: DataTypes.STRING,
+            allowNull : false
+        },
+        descripcion:{
+            type: DataTypes.STRING,
+            allowNull : false
+        },
+        descripcion_corta:{
+            type: DataTypes.STRING,
+            allowNull : false
+        },
+        precio:{
+            type: DataTypes.INTEGER,
+            allowNull : false
+        },
+        imagen:{
+            type: DataTypes.STRING,
+            allowNull : false
+        },
+        nuevo:{
+            type: DataTypes.BOOLEAN,
+            allowNull : false
+        },
+        destacado:{
+            type: DataTypes.BOOLEAN,
+            allowNull : false
+        },
+        descuento:{
+            type: DataTypes.BOOLEAN,
+            allowNull : false
+        },
+        porcentaje_descuento:{
+            type: DataTypes.INTEGER,
+            allowNull : false
+        },
+
+        categoria_id:{
+            type: DataTypes.INTEGER,
+            allowNull : false
+        },
+
+       
     }
-    /*
+   
     let config ={
-        tableName: 'products',
-        timestamps: true,
+        tableName: 'productos',
+        timestamps: false,
         underscore: true
-    }
-    */
-    const Product = sequelize.define(alias, cols);
+    } 
+    
+    const Product = sequelize.define(alias, cols, config);
     Product.associate = function(models){
         Product.belongsTo(models.Category, {
-            as : 'category',
-            foreignKey : 'categoryId'
-        })
-    }
+            as : 'categoria',
+            foreignKey : 'categoria_id'
+        });
+        Product.belongsToMany(models.User,{
+            as : 'pedidos',
+            through : 'pedido_detalle',
+            foreignKey : 'producto_id',
+            otherKey : 'usuario_id',
+            timestamps : false
+        });
+    };
     return Product;
 }
