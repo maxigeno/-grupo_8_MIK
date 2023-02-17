@@ -33,7 +33,7 @@ CREATE TABLE IF NOT EXISTS `usuarios` (
   `email` varchar(50) NOT NULL,
   `password` varchar(255) NOT NULL,
   `avatar` varchar(255),
-  `rol` enum('admin','user') NOT NULL DEFAULT 'user',
+  `rol` enum('admin','user')  DEFAULT 'user',
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=UTF8MB4;
 
@@ -59,7 +59,7 @@ INSERT INTO `categorias` (`nombre`) VALUES
 ('adultos'),
 ('ancianos'),
 ('mujeres'),
-('hombres');
+('hombres'),
 ('familia');
 
 /* insert  productos */

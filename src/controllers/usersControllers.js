@@ -11,7 +11,6 @@ const USer = require("../models/User");
 //const db = require("../database/models");
 const db = require("./../database/models");
 
-
 const usersControllers = {
   login: (req, res) => {
     console.log(req.session);
@@ -90,23 +89,21 @@ const usersControllers = {
         //...req.body,
         nombre: req.body.first_name,
         apellido: req.body.last_name,
-        email : req.body.email,
+        email: req.body.email,
         password: bcrypt.hashSync(req.body.password, 10),
         avatar: image,
-
       };
-      console.log("newUser" , newUser);
+      console.log("newUser", newUser);
       db.User.findAll().then((data) => {
         console.log("data", data);
       });
-      /* db.create({
+      db.User.create({
         nombre: req.body.first_name,
         apellido: req.body.last_name,
-        email : req.body.email,
+        email: req.body.email,
         password: bcrypt.hashSync(req.body.password, 10),
         avatar: image,
-      
-      }); */
+      });
       res.redirect("users/login");
       //si hay errores, renderizo el form con los errores y los datos que ya habia ingresado el usuario
     } else {

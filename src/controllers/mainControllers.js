@@ -12,9 +12,9 @@ const calculateDiscount = (price, discountPer) => {
 
 const mainControllers = {
   index: (req, res) => {
-    db.User.findAll().then((data) => {
+    /*  db.User.findAll().then((data) => {
       console.log("data", data);
-    });
+    }); */
     // console.log(req.cookies.userEmail);
     //console.log("desde el home", req.session);
     let newCourse = products.filter((product) => product.isNew === true);
