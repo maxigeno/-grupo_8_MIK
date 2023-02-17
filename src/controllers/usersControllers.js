@@ -7,7 +7,7 @@ const { validationResult } = require("express-validator");
 //const users = JSON.parse(fs.readFileSync(usersFilePath, "utf-8"));
 //const { ok } = require("assert");
 
-const USer = require("../models/User");
+//const USer = require("../models/User");
 //const db = require("../database/models");
 const db = require("./../database/models");
 
@@ -85,18 +85,7 @@ const usersControllers = {
         });
       }
 
-      let newUser = {
-        //...req.body,
-        nombre: req.body.first_name,
-        apellido: req.body.last_name,
-        email: req.body.email,
-        password: bcrypt.hashSync(req.body.password, 10),
-        avatar: image,
-      };
-      console.log("newUser", newUser);
-      db.User.findAll().then((data) => {
-        console.log("data", data);
-      });
+      //si el usuario no esta registrado, lo creo en la base de datos
       db.User.create({
         nombre: req.body.first_name,
         apellido: req.body.last_name,

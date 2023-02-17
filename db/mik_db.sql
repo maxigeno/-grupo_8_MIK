@@ -54,13 +54,11 @@ CREATE TABLE IF NOT EXISTS `pedido_detalle` (
 
 /* insert categorias */
 INSERT INTO `categorias` (`nombre`) VALUES
-('niños'),
-('adolecentes'),
-('adultos'),
-('ancianos'),
-('mujeres'),
-('hombres'),
-('familia');
+('deportes'),
+('arte'),
+('reacreación'),
+('educación');
+
 
 /* insert  productos */
 INSERT INTO `productos` ( `nombre`, `descripcion`, `descripcion_corta`, `precio`, `imagen`, `nuevo`, `destacado`, `descuento`, `porcentaje_descuento`, `categoria_id`) VALUES
