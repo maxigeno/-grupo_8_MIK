@@ -4,6 +4,8 @@ const path = require("path");
 const productsFilePath = path.join(__dirname, "../data/productsDataBase.json");
 const products = JSON.parse(fs.readFileSync(productsFilePath, "utf-8"));
 
+const db = require("../database/models");
+
 const calculateDiscount = (price, discountPer) => {
   let discount = price * (discountPer / 100);
   return price - discount;
@@ -11,7 +13,10 @@ const calculateDiscount = (price, discountPer) => {
 
 const productsControllers = {
   // Root - Show all products
-  products: (req, res) => {
+  products: async (req, res) => {
+    //db
+    let productsDB = await db.Product.findAll();
+    //json
     let newCourse = products.filter((product) => product.isNew == true);
 
     let inSale = products.filter((product) => product.inSale == true);
@@ -26,34 +31,58 @@ const productsControllers = {
     });
   },
   // Detail
-  detail: (req, res) => {
+  detail: async (req, res) => {
     let id = req.params.id;
+    //db
+    let productDB = await db.Product.findByPk(id);
+    //json
     let product = products.find((product) => product.id == id);
     res.render("productDetail", { product });
   },
   // Create Form
-  create: (req, res) => {
-    res.render("productCreate");
+  create: async (req, res) => {
+    //db traigo las categorias
+   let categories = await db.Category.findAll()
+  console.log("categories", categories)
+    res.render("productCreate", {categories});
+
   },
   // Create Method POST
   store: (req, res) => {
+
     let image;
     if (req.file != undefined) {
       image = req.file.filename;
     } else {
-      image = "default-image.png";
+      image = "producto-sin-foto.webp";
     }
 
-    let newProduct = {
-      id: products[products.length - 1].id + 1,
+
+    //json
+    /* let newProduct = {
       ...req.body,
+      id: products[products.length - 1].id + 1,
       isNew: req.body.isNew === "true" ? true : false,
       inSale: req.body.inSale === "true" ? true : false,
       image,
-    };
-    products.push(newProduct);
-    //console.log("products", products);
-    fs.writeFileSync(productsFilePath, JSON.stringify(products, null, " "));
+    }; */
+
+    //json
+/*     products.push(newProduct);
+    fs.writeFileSync(productsFilePath, JSON.stringify(products, null, " ")); */
+
+    //db
+    db.Product.create({
+      nombre : req.body.name,
+      descripcion : req.body.description,
+      precio : parseInt(req.body.price, 10),
+      categoria_id : parseInt(req.body.category),
+      nuevo: req.body.isNew === "true" ? 1 : 0,
+      destacado: req.body.inSale === "true" ? 1 : 0,
+      porcentaje_descuento :parseInt(req.body.discount),
+      imagen : image,
+    });
+
     res.redirect("/");
   },
   // Update  Form to edit

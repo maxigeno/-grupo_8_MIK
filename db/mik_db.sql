@@ -13,12 +13,11 @@ CREATE TABLE IF NOT EXISTS `productos` (
   `id` int NOT NULL AUTO_INCREMENT,
   `nombre` varchar(30) NOT NULL,
   `descripcion` varchar(200) NOT NULL,
-  `descripcion_corta` varchar(125) NOT NULL,
-  `precio` decimal(10,2) NOT  NULL DEFAULT '0.00',
+  `descripcion_corta` varchar(125),
+  `precio` decimal (10,2) NOT NULL DEFAULT '0.00',
   `imagen` varchar(255) NOT NULL,
   `nuevo` tinyint NOT NULL DEFAULT '0',
   `destacado` tinyint NOT NULL DEFAULT '0',
-  `descuento` tinyint NOT NULL DEFAULT '0',
   `porcentaje_descuento` int NOT NULL DEFAULT '0',
   `categoria_id` int NOT NULL,
   PRIMARY KEY (`id`),
@@ -57,12 +56,13 @@ INSERT INTO `categorias` (`nombre`) VALUES
 ('deportes'),
 ('arte'),
 ('reacreación'),
+('cocina'),
 ('educación');
 
 
 /* insert  productos */
-INSERT INTO `productos` ( `nombre`, `descripcion`, `descripcion_corta`, `precio`, `imagen`, `nuevo`, `destacado`, `descuento`, `porcentaje_descuento`, `categoria_id`) VALUES
-( 'curso de yoga', 'ayudara a los niños apoder encontrar...', 'curso de yoga para miños' , 4500.00, 'camisa.jpg', 1, 0, 1, 10, 1);
+INSERT INTO `productos` ( `nombre`, `descripcion`, `descripcion_corta`, `precio`, `imagen`, `nuevo`, `destacado`, `porcentaje_descuento`, `categoria_id`) VALUES
+( 'curso de yoga', 'ayudara a los niños apoder encontrar...', 'curso de yoga para miños' , 4500.00, 'camisa.jpg', 1, 0,  10, 1);
 
 /* insert usuario */
 INSERT INTO `usuarios` ( `nombre`, `apellido`, `email`, `password`, `rol`) VALUES

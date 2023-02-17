@@ -1,22 +1,20 @@
 <!DOCTYPE html>
 <html lang="es">
-<%- include('./partials/head')%>
+<head>
+    <%- include('./partials/head')%>
 </head>
 <body>
 <%- include('./partials/header')%>
-<div class="banner__container">
-    <div class="banner__wrap">
-        <div class="banner__info">
-            <h1>Entretenimiento para toda la familia</h1>
-            <p>En MIK generamos cursos con calidad y estamos comprometidos con mejorar la vida de todos nuestros usuarios a través de una manera eficiente y divertida.</p>
+    <div class="banner__container">
+        <div class="banner__wrap">
+            <div class="banner__info">
+                <h1>Entretenimiento para toda la familia</h1>
+                <p>En MIK generamos cursos con calidad y estamos comprometidos con mejorar la vida de todos nuestros usuarios a través de una manera eficiente y divertida.</p>
+            </div>
         </div>
     </div>
-</div>
 <main>
   <h3 class="title">Novedades</h3>
-
-  
-  
   <section class="cards">
       <% newCourse.forEach( product => { %>
         <article class="card">

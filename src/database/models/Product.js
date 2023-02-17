@@ -17,10 +17,8 @@ module.exports = (sequelize,DataTypes) => {
             type: DataTypes.STRING,
             allowNull : false
         },
-        descripcion_corta:{
-            type: DataTypes.STRING,
-            allowNull : false
-        },
+        descripcion_corta: DataTypes.STRING,
+           
         precio:{
             type: DataTypes.INTEGER,
             allowNull : false
@@ -37,21 +35,15 @@ module.exports = (sequelize,DataTypes) => {
             type: DataTypes.BOOLEAN,
             allowNull : false
         },
-        descuento:{
-            type: DataTypes.BOOLEAN,
-            allowNull : false
-        },
         porcentaje_descuento:{
             type: DataTypes.INTEGER,
             allowNull : false
         },
-
         categoria_id:{
             type: DataTypes.INTEGER,
             allowNull : false
         },
 
-       
     }
    
     let config ={
