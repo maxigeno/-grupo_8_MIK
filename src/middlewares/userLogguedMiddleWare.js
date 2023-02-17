@@ -1,6 +1,7 @@
-const USer = require("../models/User");
+//const USer = require("../models/User");
+const db = require("../database/models/");
 
-function userLogguedMiddleWare(req, res, next) {
+const userLogguedMiddleWare =  async (req, res, next) => {
   //si no hay usuario logueado, creo una variable local isLogged en false
   res.locals.isLogged = false;
 
@@ -8,7 +9,12 @@ function userLogguedMiddleWare(req, res, next) {
   let emailInCookie = req.cookies.userEmail;
 
   //busco el usuario en la base de datos
-  let userInCookie = USer.findByField("email", emailInCookie);
+ // let userInCookie = USer.findByField("email", emailInCookie);
+  let userInCookie = await db.User.findOne({
+    where: {
+      email: emailInCookie,
+    },
+  });
 
   //si el usuario existe
   if (userInCookie) {

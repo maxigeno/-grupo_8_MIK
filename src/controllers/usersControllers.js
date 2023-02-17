@@ -1,5 +1,5 @@
-const fs = require("fs");
-const path = require("path");
+//const fs = require("fs");
+//const path = require("path");
 const bcrypt = require("bcryptjs");
 const { validationResult } = require("express-validator");
 
@@ -7,20 +7,25 @@ const { validationResult } = require("express-validator");
 //const users = JSON.parse(fs.readFileSync(usersFilePath, "utf-8"));
 //const { ok } = require("assert");
 
-//const USer = require("../models/User");
+const USer = require("../models/User");
 //const db = require("../database/models");
 const db = require("./../database/models");
 
 const usersControllers = {
   login: (req, res) => {
-    console.log(req.session);
+    //console.log(req.session);
     res.render("users/login");
   },
-  procesLogin: (req, res) => {
+  procesLogin: async (req, res) => {
     //valido los datos del form
     let errors = validationResult(req);
     //busco el usuario en la base de datos
-    let userToLogin = USer.findByField("email", req.body.email);
+    //let userToLogin = USer.findByField("email", req.body.email);
+    let userToLogin = await db.User.findOne({
+      where: {
+        email: req.body.email,
+      },
+    });
 
     //si el usuario no existe, renderizo el form con el error y los datos que ya  ingreso el usuario
     if (!userToLogin) {
@@ -60,7 +65,7 @@ const usersControllers = {
   register: (req, res) => {
     res.render("./users/register");
   },
-  newUSer: (req, res) => {
+  newUSer: async (req, res) => {
     let errors = validationResult(req);
     //si array errors esta vacio, no hay errores,
     if (errors.isEmpty()) {
@@ -71,7 +76,13 @@ const usersControllers = {
         image = "default-image.png";
       }
       //busco si el usuario ya esta registrado
-      let userInDB = USer.findByField("email", req.body.email);
+     // let userInDB = USer.findByField("email", req.body.email);
+      let userInDB = await db.User.findOne({
+        where: {
+          email: req.body.email,
+        },
+      });
+
 
       //si el usuario ya esta registrado, renderizo el form con el error y los datos que ya habia ingresado el usuario
       if (userInDB) {
