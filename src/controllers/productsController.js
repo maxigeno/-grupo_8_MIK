@@ -86,15 +86,21 @@ const productsControllers = {
     res.redirect("/");
   },
   // Update  Form to edit
-  edit: (req, res) => {
+  edit:async (req, res) => {
     let id = req.params.id;
-    let productToEdit = products.find((product) => product.id == id);
-    res.render("productEdit", { productToEdit });
+    // JSON
+    //let productToEdit = products.find((product) => product.id == id);
+    // db
+    let productToEdit = await db.Product.findByPk(id);
+    let categories = await db.Category.findAll();
+    res.render("productEdit", { productToEdit, categories});
   },
   // Update - Method to update
-  update: (req, res) => {
+  update: async (req, res) => {
     let id = req.params.id;
-    let productToEdit = products.find((product) => product.id == id);
+    // JSON
+    // let productToEdit = products.find((product) => product.id == id);
+    let productToEdit = await db.Product.findByPk(id);
     let image;
 
     if (req.file != undefined) {
@@ -102,33 +108,57 @@ const productsControllers = {
     } else {
       image = "default-image.png";
     }
+// JSON
+    // productToEdit = {
+    //   id: productToEdit.id,
+    //   ...req.body,
+    //   isNew: req.body.isNew === "true" ? true : false,
+    //   inSale: req.body.inSale === "true" ? true : false,
+    //   image,
+    // };
 
-    productToEdit = {
-      id: productToEdit.id,
-      ...req.body,
-      isNew: req.body.isNew === "true" ? true : false,
-      inSale: req.body.inSale === "true" ? true : false,
-      image,
-    };
+    // let newProducts = products.map((product) => {
+    //   if (product.id == productToEdit.id) {
+    //     return (product = { ...productToEdit });
+    //   }
+    //   return product;
+    //});
 
-    let newProducts = products.map((product) => {
-      if (product.id == productToEdit.id) {
-        return (product = { ...productToEdit });
-      }
-      return product;
-    });
-
-    fs.writeFileSync(productsFilePath, JSON.stringify(newProducts, null, " "));
+   // fs.writeFileSync(productsFilePath, JSON.stringify(newProducts, null, " "));
+   
+   // DB
+   let productEdit = {
+    nombre : req.body.name,
+    descripcion : req.body.description,
+    precio : parseInt(req.body.price, 10),
+    categoria_id : parseInt(req.body.category),
+    nuevo: req.body.isNew === "true" ? 1 : 0,
+    destacado: req.body.inSale === "true" ? 1 : 0,
+    porcentaje_descuento :parseInt(req.body.discount),
+    imagen : image,
+   }
+   await db.Product.update({ ...productEdit }, {
+    where: {
+      id : id
+    }
+  });
     res.redirect("/");
   },
 
-  destroy: (req, res) => {
-    let id = req.params.id;
-    let finalProducts = products.filter((product) => product.id != id);
-    fs.writeFileSync(
-      productsFilePath,
-      JSON.stringify(finalProducts, null, " ")
-    );
+  destroy:  (req, res) => {
+    let id = parseInt(req.params.id);
+   console.log(id,"")
+    // JSON
+    //let finalProducts = products.filter((product) => product.id != id);
+   // fs.writeFileSync(
+     // productsFilePath,
+     // JSON.stringify(finalProducts, null, " ")
+    //);
+     db.Product.destroy({ 
+      where: {
+        id : id
+      }
+    });
     res.redirect("/");
   },
 };
