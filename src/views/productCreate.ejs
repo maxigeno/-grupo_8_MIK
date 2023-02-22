@@ -19,12 +19,23 @@
                 <div class="form-create">
                     <div class="items">
                         <label for="name" class="form-label">Nombre del producto:</label>
-                        <input type="text" id="name" name="name" placeholder="Ej: Natación para niños" class="form-input">
+                        <input type="text" id="name" name="name" placeholder="Ej: Natación para niños" class="form-input" value="<%= locals.old && old.name ? old.name:'' %>">
                     </div>
+                    <% if (locals.errors && errors.name) { %>
+                        <div class="alert alert-danger" role="alert"">
+                            <%=  errors.name.msg %> 
+                        </div>
+                    <% } %>
                     <div class="items">
                         <label for="price" class="form-label">Precio del producto:</label>
-                        <input type="number" step="0.01"  id="price" name="price" placeholder="Ej: 5678" class="form-input">
+                        <input type="number" step="0.01"  id="price" name="price" placeholder="Ej: 5678" class="form-input"  value="<%= locals.old && old.price ? old.price:'' %>">
                     </div>
+                    <% if (locals.errors && errors.price) { %>
+                        <div class="alert alert-danger" role="alert"">
+                            <%=  errors.price.msg %> 
+                        </div>
+                    <% } %>
+                    
                     <div class="items">
                         <label for="discount" class="form-label">Descuento:</label>
                         <input type="number" id="discount" name="discount" placeholder="Ej: 15" class="form-input">
@@ -51,17 +62,22 @@
                     <div class="newOrSale">
                         <label for="isNew" class="form-label" >Mostrar como nuevo</label>
                         <label for="isNew" class="radio-option">Si</label><input type="radio" id="isNew" name="isNew" value="true">
-                        <label for="isNew" class="radio-option">No</label><input type="radio" id="isNew" name="isNew" value="false">
+                        <label for="isNew" class="radio-option">No</label><input type="radio" id="isNew" name="isNew" value="false" checked>
                     </div>
                     <div class="newOrSale">
                         <label for="inSale" class="form-label">Mostrar como novedad</label>
                         <label for="inSale" class="radio-option">Si</label><input type="radio" id="inSale" name="inSale" value=true>
-                        <label for="inSale" class="radio-option">No</label><input type="radio" id="inSale" name="inSale" value=false>
+                        <label for="inSale" class="radio-option">No</label><input type="radio" id="inSale" name="inSale" value=false checked>
                     </div>
                     <div class="form-description">
                         <label for="description" class="form-label">Descipción:</label>
-                        <textarea name="description" id="description" class="form-input"></textarea>
+                        <textarea name="description" id="description" cols="30" rows="10"  class="form-input"  value="<%= locals.old && old.description ? old.description:'' %>"></textarea>
                     </div>
+                    <% if (locals.errors && errors.description) { %>
+                        <div class="alert alert-danger" role="alert"">
+                            <%=  errors.description.msg %> 
+                        </div>
+                    <% } %>
                     <div class="product-img">
                         <label for="category" class="form-label">Inserte una imagen:</label>
                         <input type="file" name="image" id="image">

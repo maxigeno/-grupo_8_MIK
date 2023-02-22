@@ -2,7 +2,7 @@ const express = require("express");
 const router = express.Router();
 const multer = require("multer");
 const path = require("path");
-const { body } = require("express-validator");
+//const { body } = require("express-validator");
 
 // ************ Requiero middleware custom ************
 const validateRegister = require("../middlewares/validateRegister");

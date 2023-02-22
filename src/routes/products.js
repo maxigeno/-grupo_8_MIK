@@ -6,6 +6,10 @@ const path = require("path");
 // ************ Requiero el controlador ************
 const productsController = require("../controllers/productsController");
 
+// ************ Requiero middleware custom ************
+const validateCreateProduct = require("../middlewares/validateCreateProduct");
+//const validateLogin = require("../middlewares/validateLogin");
+
 // ************ multer ************
 const storage = multer.diskStorage({
   destination(req, file, cb) {
@@ -26,7 +30,12 @@ router.get("/", productsController.products);
 
 /*** CREATE ONE PRODUCT ***/
 router.get("/create", productsController.create);
-router.post("/", upload.single("image"), productsController.store);
+router.post(
+  "/",
+  upload.single("image"),
+  validateCreateProduct,
+  productsController.store
+);
 
 /*** GET ONE PRODUCT ***/
 router.get("/:id/", productsController.detail);

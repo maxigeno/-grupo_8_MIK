@@ -517,7 +517,7 @@ a{
 /*============ Formularios products ==============*/
 
 .create-form{
-    max-width: 80%;
+    min-width: 80%;
     background-color: white;
     padding: 20px;
     border-radius: 1%;
@@ -684,6 +684,10 @@ a{
     /* Esconde menu icon */
     header .menu-icon__container{
       display: none;
+    }
+
+    .create-form{
+        max-width: 50%;
     }
     
 }

@@ -1,63 +1,95 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
+  <head>
     <%- include('./partials/head')%>
-</head>
-<body>
-<%- include('./partials/header')%>
+  </head>
+  <%- include('./partials/header')%>
+  <body>
     <div class="banner__container">
-        <div class="banner__wrap">
-            <div class="banner__info">
-                <h1>Entretenimiento para toda la familia</h1>
-                <p>En MIK generamos cursos con calidad y estamos comprometidos con mejorar la vida de todos nuestros usuarios a través de una manera eficiente y divertida.</p>
-            </div>
+      <div class="banner__wrap">
+        <div class="banner__info">
+          <h1>Entretenimiento para toda la familia</h1>
+          <p>
+            En MIK generamos cursos con calidad y estamos comprometidos con
+            mejorar la vida de todos nuestros usuarios a través de una manera
+            eficiente y divertida.
+          </p>
         </div>
+      </div>
     </div>
-<main>
-  <h3 class="title">Novedades</h3>
-  <section class="cards">
-      <% newCourse.forEach( product => { %>
+    <main>
+      <!-- DESTACADOS -->
+      <div class="destacado_container">
+        <img
+          src="/static/img/destacados.png"
+          alt="imagen_promocion"
+          class="img_promocion"
+        />
+      </div>
+
+      <section class="cards">
+        <% inSale.forEach( product => { %>
         <article class="card">
-            <div class="card__container-img">
-                <img class="card__img" src="/static/img/<%=product.image%>" alt="Imagen Deportiva">
+          <div class="card__container-img">
+            <img
+              class="card__img"
+              src="/static/img/<%= product.imagen%>"
+              alt="Imagen Deportiva"
+            />
+          </div>
+          <div class="card__container-info">
+            <p class="card__label-offer">
+              <%=product.porcentaje_descuento%>% OFF
+            </p>
+            <h4 class="card__name"><%= product.nombre %></h4>
+            <div class="card__price-offer">
+              <p class="card__price offer">$<%= product.precio %></p>
+
+              <p class="card__price color-offer">
+                $
+                <%=calculateDiscount(product.precio,product.porcentaje_descuento
+                ) %>
+              </p>
             </div>
-            <div class="card__container-info">
-                <p class="card__label-new">Nuevo</p>
-                <h4 class="card__name"> <%= product.name %> </h4>
-                <p class="card__price">$ <%= product.price %></p>
-                <a class="card__btn" href="/products/<%=product.id%>">Ver mas <i class="fa-solid fa-arrow-right"></i></a>
-            </div>
+            <a class="card__btn" href="/products/<%=product.id%>"
+              >Ver mas <i class="fa-solid fa-arrow-right"></i
+            ></a>
+          </div>
         </article>
-      <% }) %>
+        <% }) %>
+      </section>
 
-  </section> 
+      <!-- LO NUEVO -->
+      <div class="destacado_container">
+        <img
+          src="/static/img/lo_nuevo.png"
+          alt="imagen_promocion"
+          class="img_promocion"
+        />
+      </div>
 
-  <h3 class="title">Promociones</h3>
-
-
-  <section class="cards">
-    
-    <% inSale.forEach( product => { %>
+      <section class="cards">
+        <% newCourses.forEach( product => { %>
         <article class="card">
-            <div class="card__container-img">
-                <img class="card__img" src="/static/img/<%= product.image %>" alt="Imagen Deportiva">
-            </div>
-            <div class="card__container-info">
-                <p class="card__label-offer"><%=product.discount%>% OFF</p>
-                <h4 class="card__name"><%= product.name %></h4>
-                <div class="card__price-offer">
-                    <p class="card__price offer">$<%= product.price %></p>
-                    <p class="card__price color-offer">$ <%=calculateDiscount(product.price,product.discount ) %></p>
-                </div>
-                <a class="card__btn" href="/products/<%=product.id%>">Ver mas <i class="fa-solid fa-arrow-right"></i></a>
-            </div>
-      </article>
-      <% }) %>
-
-  </section> 
-</main>
-<%- include('./partials/footer')%>
-</body>
+          <div class="card__container-img">
+            <img
+              class="card__img"
+              src="/static/img/<%=product.imagen%>"
+              alt="Imagen Deportiva"
+            />
+          </div>
+          <div class="card__container-info">
+            <p class="card__label-new">Nuevo</p>
+            <h4 class="card__name"><%= product.nombre %></h4>
+            <p class="card__price">$ <%= product.precio %></p>
+            <a class="card__btn" href="/products/<%=product.id%>"
+              >Ver mas <i class="fa-solid fa-arrow-right"></i
+            ></a>
+          </div>
+        </article>
+        <% }) %>
+      </section>
+    </main>
+    <%- include('./partials/footer')%>
+  </body>
 </html>
-
-
