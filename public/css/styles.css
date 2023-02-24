@@ -6,7 +6,7 @@ body{
 }
 ul{
     margin: 0 ;
-    padding: 0
+    padding: 0;
 }
 
 li{
@@ -183,20 +183,26 @@ header .main-nav{
 
 /*=========== MAIN ================== */
 main{
-    width: 90vw;
-    margin-left: auto;
-    margin-right: auto;
+  /*   width: 80vw; */
+   /*  margin-left: auto;
+    margin-right: auto; */
+    Display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 main .destacado_container{
+    width: 100VW;
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-direction: column;
-    margin: 80px 0;
+    margin: 80px 0 50px 0;
 }
 main .destacado_container  img{
-    border: 4px dashed rgb(71,14,97);
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
 
 }
 
@@ -211,15 +217,21 @@ main .title{
 }
 
 .cards{
+    width: 80VW;
+    display: flex;
+    
+    flex-wrap: wrap;
+    margin-bottom: 50px;
    /*  display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column; */
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 350px));
-    gap: 30px;
-    justify-content: center;
-    align-items: center;
+    grid-auto-flow: 220px;
+    gap: 1vw;
+    grid-template-columns: repeat(auto-fill, minmax(min(100% ,220px), 1fr));
+   /*  justify-content: center;
+    align-items: center; */
    
 }
 
@@ -228,6 +240,7 @@ main .title{
    /*  min-width: 300px;
     max-width: 450px; */
   /*   margin-bottom: 105px; */
+    grid-column: span 1;
     border-radius:5px;
     background-color: #fff;
     box-shadow: 2px 3px 5px rgba(73,69,52,0.4);
@@ -238,7 +251,7 @@ main .title{
 }
 .card__img {
     width: 100%;
-    height: 300px;
+  /*   height: 300px; */
 }
 
 .card__container-info{
@@ -275,7 +288,7 @@ main .title{
     text-align: center;
     position: absolute;
     right: 36%;
-    top: -40px;
+    top: -30px;
 }
 
 .card__price-offer{
@@ -288,8 +301,8 @@ main .title{
 }
 
 .card__price{
-    font-size: 20px;
-    line-height: 27px;
+    font-size: 1rem;
+    line-height: 0.5rem;
     font-weight: bold;
     color:#333;
 }
@@ -303,8 +316,8 @@ main .title{
 
 .card__name{
    /*  display: none; */
-    font-size: 1.5rem ;
-    margin-top: 1.5rem;
+    font-size: 1.2rem ;
+    margin-top: 1.2rem;
     margin-bottom:1rem;
     font-weight: bold;
   /*   margin-bottom: 0; */
