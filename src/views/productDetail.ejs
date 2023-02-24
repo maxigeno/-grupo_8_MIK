@@ -11,12 +11,12 @@
             <div class="details">
                 <article class="product_details">
                     <div class="product_img">
-                        <img class="card__img" src="/static/img/<%=product.image%>" alt="Imagen Deportiva">
+                        <img class="card__img" src="/static/img/<%=product.imagen%>" alt="Imagen Deportiva">
                     </div>
                     <section class="info">
                     <div class="product_title">
-                        <h3><%=product.name%></h3>
-                        <p class="price">$<%=product.price%></p>
+                        <h3><%=product.nommbre%></h3>
+                        <p class="price">$<%=product.precio%></p>
                     </div>
                     <div class="filter">
                     <p>Seleccione dia y hora</p>
@@ -46,14 +46,14 @@
                 <article class="product_description">
                         <h2>Descripción</h2>
                         <p class="description">
-                            <%=product.description%>
+                            <%=product.descripcion%>
                             <br><br>
                         </p>
                     </div>
     
                 </article>
                 <div class="deleteAndEdit">
-                <a href="/products/edit/<%= product.id %>" class="edit-button">EDITAR PRODUCTO</a>
+                <a href="/products/edit/<%= product.id %>" class="edit-button">EDITAR</a>
                 <form action="/products/delete/<%= product.id %>?_method=DELETE" method="POST" style="display: inline-flex">
                 <button type="submit" class="detele-button">ELIMINAR</button>
                 </div>

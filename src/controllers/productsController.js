@@ -37,9 +37,9 @@ const productsControllers = {
   detail: async (req, res) => {
     let id = req.params.id;
     //db
-    let productDB = await db.Product.findByPk(id);
+    let product = await db.Product.findByPk(id);
     //json
-    let product = products.find((product) => product.id == id);
+    //let product = products.find((product) => product.id == id);
     res.render("productDetail", { product });
   },
   // Create Form
@@ -99,69 +99,78 @@ const productsControllers = {
   // Update  Form to edit
   edit: async (req, res) => {
     let id = req.params.id;
-    // JSON
-    //let productToEdit = products.find((product) => product.id == id);
     // db
     let productToEdit = await db.Product.findByPk(id);
+
     let categories = await db.Category.findAll();
     res.render("productEdit", { productToEdit, categories });
   },
   // Update - Method to update
   update: async (req, res) => {
     let id = req.params.id;
+    let productToEdit = await db.Product.findByPk(id);
+    let errors = validationResult(req);
     // JSON
     // let productToEdit = products.find((product) => product.id == id);
-    let productToEdit = await db.Product.findByPk(id);
+
     let image;
-
-    if (req.file != undefined) {
-      image = req.file.filename;
-    } else {
-      image = "default-image.png";
-    }
-    // JSON
-    // productToEdit = {
-    //   id: productToEdit.id,
-    //   ...req.body,
-    //   isNew: req.body.isNew === "true" ? true : false,
-    //   inSale: req.body.inSale === "true" ? true : false,
-    //   image,
-    // };
-
-    // let newProducts = products.map((product) => {
-    //   if (product.id == productToEdit.id) {
-    //     return (product = { ...productToEdit });
-    //   }
-    //   return product;
-    //});
-
-    // fs.writeFileSync(productsFilePath, JSON.stringify(newProducts, null, " "));
-
-    // DB
-    let productEdit = {
-      nombre: req.body.name,
-      descripcion: req.body.description,
-      precio: parseInt(req.body.price, 10),
-      categoria_id: parseInt(req.body.category),
-      nuevo: req.body.isNew === "true" ? 1 : 0,
-      destacado: req.body.inSale === "true" ? 1 : 0,
-      porcentaje_descuento: parseInt(req.body.discount),
-      imagen: image,
-    };
-    await db.Product.update(
-      { ...productEdit },
-      {
-        where: {
-          id: id,
-        },
+    if (errors.isEmpty()) {
+      if (req.file != undefined) {
+        image = req.file.filename;
+      } else {
+        image = "default-image.png";
       }
-    );
-    res.redirect("/");
+      // JSON
+      // productToEdit = {
+      //   id: productToEdit.id,
+      //   ...req.body,
+      //   isNew: req.body.isNew === "true" ? true : false,
+      //   inSale: req.body.inSale === "true" ? true : false,
+      //   image,
+      // };
+
+      // let newProducts = products.map((product) => {
+      //   if (product.id == productToEdit.id) {
+      //     return (product = { ...productToEdit });
+      //   }
+      //   return product;
+      //});
+
+      // fs.writeFileSync(productsFilePath, JSON.stringify(newProducts, null, " "));
+
+      // DB
+      let productEdit = {
+        nombre: req.body.name,
+        descripcion: req.body.description,
+        precio: parseInt(req.body.price, 10),
+        categoria_id: parseInt(req.body.category),
+        nuevo: req.body.isNew === "true" ? 1 : 0,
+        destacado: req.body.inSale === "true" ? 1 : 0,
+        porcentaje_descuento: parseInt(req.body.discount),
+        imagen: image,
+      };
+      await db.Product.update(
+        { ...productEdit },
+        {
+          where: {
+            id: id,
+          },
+        }
+      );
+      res.redirect("/");
+    } else {
+      let categories = await db.Category.findAll();
+      res.render("productEdit", {
+        errors: errors.mapped(),
+        productToEdit,
+        categories,
+      });
+    }
   },
 
   destroy: (req, res) => {
     let id = parseInt(req.params.id);
-    console.log(id, "");
+
     // JSON
     //let finalProducts = products.filter((product) => product.id != id);
     // fs.writeFileSync(
