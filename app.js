@@ -5,6 +5,7 @@ const session = require("express-session");
 const cookies = require("cookie-parser");
 const app = express();
 
+const PORT = process.env.PORT || 3030;
 const userLogguedMiddleWare = require("./src/middlewares/userLogguedMiddleWare");
 
 //configuro lo static para express
@@ -41,9 +42,15 @@ app.use("/", indexRouter);
 app.use("/users", usersRouter);
 app.use("/products", productsRouter);
 
-//Configuro puerto
-app.listen(3030, () => {
-  console.log("Servidor funcionando");
+app.use((req, res, next) => {
+  res.status(404).render("404");
 });
+
+
+app.listen(PORT, () => {
+  console.log("Servidor funcionando ");
+});
+
+
 
 module.exports = app;
