@@ -88,7 +88,9 @@ const productsControllers = {
       });
 
       res.redirect("/");
+    
     } else {
+      //console.log("req.body", req.body)
       res.render("productCreate", {
         errors: errors.mapped(),
         old: req.body,
@@ -101,7 +103,7 @@ const productsControllers = {
     let id = req.params.id;
     // db
     let productToEdit = await db.Product.findByPk(id);
-
+   // console.log("productToEdit", productToEdit)
     let categories = await db.Category.findAll();
     res.render("productEdit", { productToEdit, categories });
   },
@@ -109,6 +111,7 @@ const productsControllers = {
   update: async (req, res) => {
     let id = req.params.id;
     let productToEdit = await db.Product.findByPk(id);
+    console.log("productToEdit", productToEdit)
     let errors = validationResult(req);
     // JSON
     // let productToEdit = products.find((product) => product.id == id);

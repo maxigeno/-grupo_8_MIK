@@ -1,99 +1,116 @@
-<!-- <!DOCTYPE html>
-<html lang="es">
-
-  
-    <link rel="stylesheet" href="/static/css/app.css">
-</head> -->
+<%- include('./partials/head')%>
+   
 <body>
     <%- include('./partials/header')%>
-
-<main>
-    <div class="create-form">
-		<div class="form-title">
-			<div class="">
-				<h2 class="products-title">Formulario de edición de productos</h2>
-			</div>
-		</div>
-		<div class="form-body">
-			<form action="/products/edit/<%= productToEdit.id %> ?_method=PATCH"" method="POST" enctype="multipart/form-data">
-				<div class="form-create">
-                    <div class="items">
-                        <label for="name" class="form-label">Nombre del producto:</label>
-                        <input type="text" id="name" name="name" placeholder="Ej: Natación para niños" class="form-input" value="<%=productToEdit.nombre %>">
+        <main>
+            <div class="create-form">
+                <div class="form-title">
+                    <div class="">
+                        <h2 class="products-title">Formulario de edición de productos</h2>
                     </div>
-                    <% if (locals.errors && errors.name) { %>
-                        <div class="alert alert-danger" role="alert"">
+                </div>
+                <div class="form-body">
+                    <form action="/products/edit/<%= productToEdit.id %> ?_method=PATCH"" method=" POST"
+                        enctype="multipart/form-data">
+                        <div class="form-create">
+                            <div class="items">
+                                <label for="name" class="form-label">Nombre del producto:</label>
+                                <input type="text" id="name" name="name" placeholder="Ej: Natación para niños"
+                                    class="form-input" value="<%=productToEdit.nombre %>">
+                            </div>
+                            <% if (locals.errors && errors.name) { %>
+                                <div class="alert alert-danger" role="alert"">
                             <%=  errors.name.msg %> 
                         </div>
                     <% } %>
-                    <div class="items">
-                        <label for="price" class="form-label">Precio del producto:</label>
-                        <input type="number"step="0.01"  id="price" name="price" placeholder="Ej: 5678" class="form-input" value="<%=productToEdit.precio %>">
-                    </div>
-                    <% if (locals.errors && errors.price) { %>
-                        <div class="alert alert-danger" role="alert"">
+                    <div class=" items">
+                                    <label for="price" class="form-label">Precio del producto:</label>
+                                    <input type="number" step="0.01" id="price" name="price" placeholder="Ej: 5678"
+                                        class="form-input" value="<%=productToEdit.precio %>">
+                                </div>
+                                <% if (locals.errors && errors.price) { %>
+                                    <div class="alert alert-danger" role="alert"">
                             <%=  errors.price.msg %> 
                         </div>
                     <% } %>
                     
-                    <div class="items">
-                        <label for="discount" class="form-label">Descuento:</label>
-                        <input type="number" id="discount" name="discount" placeholder="Ej: 15" class="form-input" value="<%=productToEdit.porcentaje_descuento %>">
-                    </div>
-                    <% if (locals.errors && errors.discount) { %>
-                        <div class="alert alert-danger" role="alert"">
+                    <div class=" items">
+                                        <label for="discount" class="form-label">Descuento ( % )::</label>
+                                        <input type="number" id="discount" name="discount" placeholder="Ej: 15"
+                                            class="form-input" value="<%=productToEdit.porcentaje_descuento %>">
+                                    </div>
+                                    <% if (locals.errors && errors.discount) { %>
+                                        <div class="alert alert-danger" role="alert"">
                             <%=  errors.discount.msg %> 
                         </div>
                     <% } %>
-                  <!--   <div class="items">
-                        <label for="target" class="form-label">Target:</label>
-                        <select name="target" id="target" class="form-input">
-                            <option value="">Elegí</option>
-                            <option value="adultos">Adultos</option>
-                            <option value="adolescentes">Adolescentes</option>
-                            <option value="niños">Niños</option>
-                            <option value="bebes">Bebés</option>
-                        </select>
-                    </div> -->
-                   
-                    <div class="items">
-                        <label for="category" class="form-label">Categorias:</label>
-                        <select name="category" id="category" class="form-input">
-                           <% categories.forEach(category => { %>
-                                <option value="<%= category.id %>"><%= category.nombre %></option>
-                           <% }) %>
-                        </select>
-                    </div>
-                    <div class="newOrSale">
-                        <label for="isNew" class="form-label" >Mostrar como nuevo</label>
-                        <label for="isNew" class="radio-option">Si</label><input type="radio" id="isNew" name="isNew" value="true">
-                        <label for="isNew" class="radio-option">No</label><input type="radio" id="isNew" name="isNew" value="false" checked>
-                    </div>
-                    <div class="newOrSale">
-                        <label for="inSale" class="form-label">Mostrar como novedad</label>
-                        <label for="inSale" class="radio-option">Si</label><input type="radio" id="inSale" name="inSale" value=true>
-                        <label for="inSale" class="radio-option">No</label><input type="radio" id="inSale" name="inSale" value=false checked>
-                    </div>
-                    <div class="form-description">
-                        <label for="description" class="form-label">Descipción:</label>
-                        <textarea name="description" id="description" cols="30" rows="10"  class="form-input" ><%=productToEdit.descripcion %>  </textarea>
-                    </div>
-                    <% if (locals.errors && errors.description) { %>
-                        <div class="alert alert-danger" role="alert"">
+                  <!--   <div class=" items">
+                                            <label for="target" class="form-label">Target:</label>
+                                            <select name="target" id="target" class="form-input">
+                                                <option value="">Elegí</option>
+                                                <option value="adultos">Adultos</option>
+                                                <option value="adolescentes">Adolescentes</option>
+                                                <option value="niños">Niños</option>
+                                                <option value="bebes">Bebés</option>
+                                            </select>
+                                        </div> -->
+
+                                        <div class="items">
+                                            <label for="category" class="form-label">Categorias:</label>
+                                            <select name="category" id="category" class="form-input">
+                                                <% categories.forEach(category=> { %>
+                                                    <option value="<%= category.id %>"
+                                                        <%=productToEdit.categoria_id == category.id ? "selected" :null %>
+                                                        
+                                                        >
+                                                        <%= category.nombre %>
+                                                    </option>
+                                                    <% }) %>
+                                            </select>
+                                        </div>
+                                        <div class="newOrSale">
+                                            <label for="isNew" class="form-label">Mostrar como nuevo</label>
+                                            <label for="isNew" class="radio-option">Si</label>
+                                            <input type="radio" id="isNew" name="isNew" value="true"
+                                                <%=productToEdit.nuevo == true ? "checked" :null %>
+                                            >
+                                            <label for="isNew" class="radio-option">No</label>
+                                            <input type="radio" id="isNew" name="isNew" value="false" 
+                                            <%=productToEdit.nuevo == false ? "checked" :null %>
+                                            >
+                                        </div>
+                                        <div class="newOrSale">
+                                            <label for="inSale" class="form-label">Mostrar como novedad</label>
+                                            <label for="inSale" class="radio-option">Si</label>
+                                            <input type="radio" id="inSale" name="inSale" value=true
+                                                <%=productToEdit.destacado == true ? "checked" :null %>
+                                            >
+                                            <label for="inSale" class="radio-option">No</label>
+                                            <input type="radio" id="inSale" name="inSale" value=false 
+                                            <%=productToEdit.destacado == false ? "checked" :null %>
+                                            >
+                                        </div>
+                                        <div class="form-description">
+                                            <label for="description" class="form-label">Descipción:</label>
+                                            <textarea name="description" id="description" cols="30" rows="10"
+                                                class="form-input"><%=productToEdit.descripcion %>  </textarea>
+                                        </div>
+                                        <% if (locals.errors && errors.description) { %>
+                                            <div class="alert alert-danger" role="alert"">
                             <%=  errors.description.msg %> 
                         </div>
                     <% } %>
-                    <div class="product-img">
-                        <label for="category" class="form-label">Inserte una imagen:</label>
-                        <input type="file" name="image" id="image">
-                    </div>
-                    <div class="boton-guardar">
-                        <button type="submit" class="save-button">Guardar producto</button>
-                    </div>
+                    <div class=" product-img">
+                                                <label for="category" class="form-label">Inserte una imagen:</label>
+                                                <input type="file" name="image" id="image">
+                                            </div>
+                                            <div class="boton-guardar">
+                                                <button type="submit" class="save-button">Guardar producto</button>
+                                            </div>
+                        </div>
+                    </form>
                 </div>
-			</form>
-		</div>
 
-	</div>
-</main>
-<%- include('./partials/footer')%>
+            </div>
+        </main>
+        <%- include('./partials/footer')%>

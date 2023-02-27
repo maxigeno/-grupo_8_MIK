@@ -523,19 +523,255 @@ select{
     margin-bottom: 16px;
 }
 
+/* CReate product */
+
+.form-register{
+    width: 80%;
+    max-width: 400px;
+    background-color: white;
+    padding: 30px;
+    font-family: 'calibri';
+    color: gray;
+    border: solid 1px #303F9F;
+    margin:auto;
+    margin-top: 20px;
+}
+
+.form-register h3{
+    font-size: 22px;
+    margin-bottom: 20px;
+}
+
+.controls{
+    width: 90%;
+    background-color: white;
+    padding: 10px;
+    border-radius: 4px;
+    margin-bottom: 16px;
+    border: solid 1px #FF4081;
+    font-size: 18px;
+    font-family: 'calibri';
+}
+
+.form-register p{
+    height: 40px;
+    text-align: center;
+    font-size: 18px;
+    line-height: 40px;
+    color:gray
+}
 
 
-/* @media (min-width: 788px){
-    .product_details{
-        display: flex;
-        justify-content: space-around;
-    }
+a{
+    text-decoration: none;
+    color:white
+}
 
-    .info{
-        display: flex;
-        flex-direction: column;
-    }
-} */
+.login{
+    text-decoration: none;
+    color: gray
+}
+
+.form-register a:hover{
+    color: #ebebeb;
+    text-decoration: underline;
+}
+
+.boton{
+    width: 95%;
+    background-color: #FF4081;
+    border: none;
+    color: white;
+    font-size: 16px;
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+    border-radius: 4px;
+    margin-bottom: 16px;
+}
+
+.date{
+    width: 90%;
+    padding: 10px;
+    margin-top: 5px;
+}
+
+.check{
+    display: flex;
+    padding: 10px;
+    flex-direction: row;
+/*     justify-content: space-between; */
+    align-items: center;
+
+}
+
+.check label{
+    font-size: 16px;
+    margin-left: 10px;
+  
+}
+
+.fechaNacimiento{
+    text-align: center;
+    font-size: 16px;
+    margin-bottom: 10px;
+    
+}
+
+/*============ cart ============*/
+
+/*main{
+    background-color: white;
+    padding: 3%;
+    margin: 5%;
+}*/
+
+.cart_details{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    margin:auto;
+}
+
+.cart_title{
+    color:#FF4081;
+
+}
+
+
+.product_detail{
+    display: flex;
+    justify-content: space-between;
+    border-top: solid 2px #EBEBEB;
+    padding: 4%;
+    font-size: 22px;
+
+}
+
+.price{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.card_img{
+    width: 40%;
+}
+
+.order_summary{
+    border: solid 2px #ebebeb;
+    padding: 4%;
+}
+
+.order_summary h3{
+    color:#303F9F;
+}
+
+.order_summary_subtotal{
+    display: flex;
+    justify-content: space-between;
+    border-top: solid 2px #EBEBEB;
+}
+
+.order_summary_total{
+    display: flex;
+    justify-content: space-between;
+    color: black;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.descuento{
+    display: flex;
+    justify-content: space-between;
+    border-bottom: solid 2px #EBEBEB;
+}
+
+.comprar{
+    width: 100%;
+    background-color: #FF4081;
+    border: none;
+    color: white;
+    font-size: 16px;
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 16px;
+}
+
+/*============ Formularios products ==============*/
+
+.create-form{
+    min-width: 350px;
+    max-width: 720px;
+    background-color: white;
+    padding: 30px;
+    border-radius: 1%;
+ /*   // border: solid 2px #FF4081; */
+    margin: auto;
+    margin-top: 20px;
+}
+
+.products-title{
+    color:gray;
+    font-size: 22px;
+}
+
+.items{
+    display: flex;
+    flex-direction: column;
+    /* padding: 10px; */
+}
+
+.form-label{
+    padding: 5px;
+    font-size:18px;
+    color:gray;
+}
+
+.form-input{
+    padding: 10px;
+    border: solid 1px #303F9F
+}
+
+.newOrSale{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    padding: 10px;
+}
+
+.form-description{
+    display:flex;
+    flex-direction: column;
+    padding: 10px;
+}
+
+.product-img{
+    padding: 10px;
+}
+
+.save-button{
+    width: 100%;
+    background-color: #FF4081;
+    border: none;
+    color: white;
+    font-size: 16px;
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+    border-radius: 4px;
+    margin-bottom: 16px;
+}
+
+.boton-guardar{
+    padding: 15px;
+    margin:auto;
+}
+
+
 
 
 @media screen and (min-width: 788px){
