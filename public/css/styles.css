@@ -180,6 +180,12 @@ header .main-nav{
  
 }
 
+#carouselExampleAutoplaying .carousel-inner img{
+    height: 50vh;
+    object-fit: cover;
+
+}
+
 
 /*=========== MAIN ================== */
 main{
@@ -419,6 +425,117 @@ footer .footer-info {
     color: #303F9F;
     cursor: pointer;
 }
+
+/*========== Product detail ===========*/
+.details{
+  /*   width: 100%; */
+    background-color: white;
+    padding: 10px;
+}
+
+article .product_details {
+    display: flex;
+    width: 70vw;
+/*     justify-content: space-between; */
+/*     align-items: center; */
+}
+
+article .product_details .product_img{
+    width: 50%;
+  /*   align-self: self-start; */
+    background-color: red;
+   /*  padding: 5px; */
+}
+article .product_details .info{
+    width: 30%;
+   /*  align-self: self-start; */
+    background-color: purple;
+   /*  padding: 5px; */
+}
+.card__img{
+    width: 100%;
+}
+
+.product_title h3{
+    font-size: 20px;
+    color:#303F9F;
+}
+
+.product_title p{
+    font-size: 16px;
+}
+
+.product_title{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.form_container{
+    display: flex;
+    justify-content: space-around;
+    border-bottom: solid 2px #EBEBEB;
+    margin: auto;
+    padding: 5px;
+    }
+
+select{
+    padding: 5px;
+    border: solid 2px #303F9F;
+    border-radius: 5px;
+}
+
+.product_description h2{
+    font-size: 25px;
+    color: #FF4081;
+    border-bottom: solid 2px #FF4081;
+}
+
+.product_description{
+    padding: 8px;
+    font-size: 16px;
+}
+
+.detele-button{
+    width: 50%;
+    margin: 0 auto;
+    background-color: #FF4081;
+    border: none;
+    color: white;
+    font-size: 16px;
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+    border-radius: 4px;
+    margin-bottom: 16px;
+}
+
+.edit-delete-button{
+   /*  width: 100%; */
+   /*  background-color: #FF4081; */
+    border: none;
+    color:  #FF4081;
+    font-size: 16px;
+    display: flex;  
+    justify-content: center;
+    padding: 10px;
+ /*    border-radius: 4px; */
+    margin-bottom: 16px;
+}
+
+
+
+/* @media (min-width: 788px){
+    .product_details{
+        display: flex;
+        justify-content: space-around;
+    }
+
+    .info{
+        display: flex;
+        flex-direction: column;
+    }
+} */
 
 
 @media screen and (min-width: 788px){

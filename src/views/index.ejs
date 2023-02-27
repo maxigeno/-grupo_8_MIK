@@ -1,11 +1,33 @@
-<!DOCTYPE html>
-<html lang="es">
-  <head>
-    <%- include('./partials/head')%>
+
+  <%- include('./partials/head')%>
   </head>
   <%- include('./partials/header')%>
   <body>
-    <div class="banner__container">
+    <div class="container mt-5s">
+      <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="/static/img/carrusel/imagen_1.jpg" class="d-block w-100" alt="...">
+          </div>
+          <div class="carousel-item">
+            <img src="/static/img/banner2.webp" class="d-block w-100" alt="...">
+          </div>
+          <div class="carousel-item">
+            <img src="/static/img/carrusel/imagen_1.jpg" class="d-block w-100" alt="...">
+          </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+        
+    </div>
+   <!--  <div class="banner__container">
       <div class="banner__wrap">
         <div class="banner__info">
           <h1>Entretenimiento para toda la familia</h1>
@@ -16,7 +38,30 @@
           </p>
         </div>
       </div>
-    </div>
+    </div> -->
+    <!-- <div>
+      <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="/static/img/carrusel/imagen_1.jpg" class="d-block w-100" alt="...">
+          </div>
+          <div class="carousel-item">
+            <img src="/static/img/banner2.webp" class="d-block w-100" alt="...">
+          </div>
+          <div class="carousel-item">
+            <img src="/static/img/carrusel/imagen_1.jpg" class="d-block w-100" alt="...">
+          </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+    </div> -->
     <main>
       <!-- DESTACADOS -->
       <div class="destacado_container">
@@ -92,5 +137,4 @@
 
     </main>
     <%- include('./partials/footer')%>
-  </body>
-</html>
+

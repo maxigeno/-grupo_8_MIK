@@ -1,67 +1,95 @@
-<!DOCTYPE html>
-<html lang="es">
-    <%- include('./partials/head')%>
-        <link rel="stylesheet" href="/static/css/app.css">
-    </head>
+<%- include('./partials/head')%>
+    <!-- <link rel="stylesheet" href="/static/css/app.css"> -->
+
     <body>
         <%- include('./partials/header')%>
-        <br><br>
+            <br><br>
+           <!--  <main>
+                <div class="details">
+                    <article class="product_details">
+                        <div class="product_img">
+                            <img class="card__img" src="/static/img/<%=product.imagen%>" alt="Imagen Deportiva">
+                        </div>
+                        <div class="info">
+                            <div class="product_title">
+                                <h3>
+                                    <%=product.nommbre%>
+                                </h3>
+                                <p class="price">$<%=product.precio%>
+                                </p>
+                            </div>
 
-        <main>
-            <div class="details">
-                <article class="product_details">
-                    <div class="product_img">
-                        <img class="card__img" src="/static/img/<%=product.imagen%>" alt="Imagen Deportiva">
-                    </div>
-                    <section class="info">
-                    <div class="product_title">
-                        <h3><%=product.nommbre%></h3>
-                        <p class="price">$<%=product.precio%></p>
-                    </div>
-                    <div class="filter">
-                    <p>Seleccione dia y hora</p>
-                    <div class="form_container">
-                        <form action="/days" method="POST">
-                            <select name="days">
-                                <option value="1">lunes</option>
-                                <option value="2">Martes</option>
-                                <option value="3">Miercoles</option>
-                                <option value="4">Jueves</option>
-                                <option value="5">Viernes</option>
-                                <option value="6">Sabado</option>
-                                <option value="7">Domingo</option>
-                            </select>
-                        </form>
-                        <from action="/horas" method="POST">
-                            <select name="hours">
-                                <option value="5pm">05:00 p.m. - 06:00 p.m.</option>
-                                <option value="6pm">06:00 p.m. - 07:00 p.m.</option>
-                                <option value="7pm">07:00 p.m. - 08:00 p.m.</option>
-                            </select>
-                        </form>
-                    </div>
-                    </div>
-                    </section>
-                </article>
-                <article class="product_description">
+                        </div>
+                    </article>
+                    <article class="product_description">
                         <h2>Descripción</h2>
                         <p class="description">
                             <%=product.descripcion%>
-                            <br><br>
+                                <br><br>
                         </p>
-                    </div>
-    
-                </article>
-                <div class="deleteAndEdit">
-                <a href="/products/edit/<%= product.id %>" class="edit-button">EDITAR</a>
-                <form action="/products/delete/<%= product.id %>?_method=DELETE" method="POST" style="display: inline-flex">
-                <button type="submit" class="detele-button">ELIMINAR</button>
+                        <div class="deleteAndEdit">
+                            <a href="/products/edit/<%= product.id %>" class="edit-button">EDITAR</a>
+                            <form action="/products/delete/<%= product.id %>?_method=DELETE" method="POST"
+                                style="display: inline-flex">
+                                <button type="submit" class="detele-button">ELIMINAR</button>
+                        </div>
+                    </article>
+
+
                 </div>
+            </main> -->
+
+            <div class="container mt-5">
+
+                <article class="card border-0 rounded-3 overflow-hidden flex-md-row">
+                    <div class="container_img flex-md-shrink-1 flex-md-grow-1 w-100">
+                        <picture>
+                            <img class="card-img-top" src="/static/img/<%=product.imagen%>" alt="Imagen Deportiva">
+                        </picture>
+                    </div>
+                    <div class="container_info flex-md-shrink-1 flex-md-grow-1 w-100 d-flex flex-column justify-content-center " >
+                        <div class="card-body mt-2">
+                            <h1 class="text-capitalize  text-center fw-bolder"><%=product.nombre%></h1>
+
+                            <div class="row my-3">
+                                <div class="col-12">
+                                    <h5>Descripción</h5>
+                                    <p class="card-text "><%=product.descripcion%></p>
+                                </div>
+                            </div>
+                            <div class="row text-end mx-2">
+                                <div class="col-12 ">
+                                    <p class="card-text fw-bolder h4">$ <%=product.precio%></p>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-12 my-3 w-100 ">
+                                   <a class="detele-button " href="">Agregar al Carrito</a>
+                                </div>
+                            </div>
+                            <div class="row mt-3 text-end">
+                                <div class="col-2">
+                                    <a href="/products/edit/<%= product.id %>" class="edit-delete-button">EDITAR</a>
+                                </div>
+                                <div class="col-2">
+                                    <form action="/products/delete/<%= product.id %>?_method=DELETE" method="POST"
+                                        style="display: inline-flex">
+                                        <button type="submit" class="edit-delete-button">ELIMINAR</button>
+                                    </form>
+                                </div>
+                                    
+                            </div>
+                            <div class="row mt-3 text-start">
+                               <div class="col-12">
+                                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nobis distinctio commodi obcaecati laborum rerum voluptatem.</p>
+                               </div>
+                                    
+                            </div>
+                        </div>
+
+                    </div>
+                </article>
+           
+
             </div>
-        </main>
-
-        <%- include('./partials/footer')%>
-
-    </body>
-
-</html>
+            <%- include('./partials/footer')%>
