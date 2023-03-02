@@ -4,47 +4,53 @@
 <body>
 <%- include('../partials/header')%>
 
-<main>
-    <section class="form-register">
-        <h3>Iniciar sesión</h3>
+<main >
+    <div class="cointainer mt-5">
 
-        <% if ( locals.invalidCredentials !== undefined) { %>
-            <div class="alert alert-danger" role="alert"">
-                <%= invalidCredentials %> 
-            </div>
-        <% } %> 
-        <form action="/users/login" method="POST">
-           <!-- email -->
-            <input class="controls" type="email" name="email" id="email" placeholder="Correo electrónico" value="<%= locals.old && old.email ? old.email : '' %>">
-
-            <% if (locals.errors && errors.email) { %>
+        <section class="form-register">
+            <h3>Iniciar sesión</h3>
+    
+            <% if ( locals.invalidCredentials !== undefined) { %>
                 <div class="alert alert-danger" role="alert"">
-                    <%= errors.email.msg %> 
+                    <%= invalidCredentials %> 
                 </div>
-            <% } %>    
-
-            <!-- password -->
-            <input class="controls" type="password" name="password" id="password" placeholder="Ingrese una contraseña">
-
-            <% if (locals.errors && errors.password) { %>
-                <div class="alert alert-danger" role="alert"">
-                    <%= errors.password.msg %> 
-                </div>
-            <% } %>   
-
-               <!-- recordar email -->
-                 <div class="check">  
-                    <input  type="checkbox" name="remember_user">
-                    <label for="tratamientoDatos">Recordar usuario</label>
-                </div>
-
-            <button class="boton" type="submit">Ingresar</button>
-           
-        </form>
-        <p><a class="login" href='./register'> Aun no estoy registrado</a></p>
-    </section>
+            <% } %> 
+            <form action="/users/login" method="POST">
+               <!-- email -->
+                <input class="controls" type="email" name="email" id="email" placeholder="Correo electrónico" value="<%= locals.old && old.email ? old.email : '' %>">
+    
+                <% if (locals.errors && errors.email) { %>
+                    <div class="alert alert-danger" role="alert"">
+                        <%= errors.email.msg %> 
+                    </div>
+                <% } %>    
+    
+                <!-- password -->
+                <input class="controls" type="password" name="password" id="password" placeholder="Ingrese una contraseña">
+    
+                <% if (locals.errors && errors.password) { %>
+                    <div class="alert alert-danger" role="alert"">
+                        <%= errors.password.msg %> 
+                    </div>
+                <% } %>   
+    
+                   <!-- recordar email -->
+                     <div class="check">  
+                        <input  type="checkbox" name="remember_user">
+                        <label for="tratamientoDatos">Recordar usuario</label>
+                    </div>
+    
+                <button class="boton" type="submit">Ingresar</button>
+               
+            </form>
+            <p><a class="login" href='./register'> Aun no estoy registrado</a></p>
+        </section>
+    </div>
 </main>
-<%- include('../partials/footer')%>
+<div style="position :absolute ; bottom: 0px; width: 100%;">
+    
+    <%- include('../partials/footer')%>
+</div>
 </body>
 </html>
 
