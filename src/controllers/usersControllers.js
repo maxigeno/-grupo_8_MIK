@@ -103,7 +103,7 @@ const usersControllers = {
         password: bcrypt.hashSync(req.body.password, 10),
         avatar: image,
       });
-      res.redirect("/");
+      res.redirect("/users/login");
       //si hay errores, renderizo el form con los errores y los datos que ya habia ingresado el usuario
     } else {
       // console.log(errors.mapped());
