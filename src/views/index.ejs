@@ -124,7 +124,7 @@
 
     <section class="cards">
       <% inSale.forEach( product => { %>
-      <article class="card">
+      <article class="card animate__animated animate__fadeIn">
         <div class="card__container-img">
           <img
             class="card__img"
@@ -145,7 +145,7 @@
               ) %>
             </p>
           </div>
-          <a class="card__btn" href="/products/<%=product.id%>"
+          <a class="card__btn" href="/products/detail/<%=product.id%>"
             >Ver mas <i class="fa-solid fa-arrow-right"></i
           ></a>
         </div>
@@ -164,7 +164,7 @@
 
     <section class="cards">
       <% newCourses.forEach( product => { %>
-      <article class="card">
+      <article class="card animate__animated animate__fadeIn">
         <div class="card__container-img">
           <img
             class="card__img"
@@ -176,7 +176,7 @@
           <p class="card__label-new">Nuevo</p>
           <h4 class="card__name"><%= product.nombre %></h4>
           <p class="card__price">$ <%= product.precio %></p>
-          <a class="card__btn" href="/products/<%=product.id%>"
+          <a class="card__btn" href="/products/detail/<%=product.id%>"
             >Ver mas <i class="fa-solid fa-arrow-right"></i
           ></a>
         </div>

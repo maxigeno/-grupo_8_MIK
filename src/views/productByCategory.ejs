@@ -1,0 +1,201 @@
+<%- include('./partials/head')%> <%- include('./partials/header')%>
+<body>
+  <div class="container mt-5s">
+    <div
+      id="carouselExampleAutoplaying"
+      class="carousel slide animate__animated animate__fadeIn"
+      data-bs-ride="carousel"
+    >
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img
+            src="/static/img/slider/slider1.jpeg"
+            class="d-block w-100"
+            alt="..."
+          />
+        </div>
+        <div class="carousel-item">
+          <img
+            src="/static/img/slider/slider3.jpg"
+            class="d-block w-100"
+            alt="..."
+          />
+        </div>
+        <div class="carousel-item">
+          <img
+            src="/static/img/slider/slider4.jpg"
+            class="d-block w-100"
+            alt="..."
+          />
+        </div>
+        <div class="carousel-item">
+          <img
+            src="/static/img/slider/slider2.jpg"
+            class="d-block w-100"
+            alt="..."
+          />
+        </div>
+        <div class="carousel-item">
+          <img
+            src="/static/img/slider/slider5.jpg"
+            class="d-block w-100"
+            alt="..."
+          />
+        </div>
+        <div class="carousel-item">
+          <img
+            src="/static/img/slider/slider7.webp"
+            class="d-block w-100"
+            alt="..."
+          />
+        </div>
+        <div class="carousel-item">
+          <img
+            src="/static/img/slider/slider6.jpg"
+            class="d-block w-100"
+            alt="..."
+          />
+        </div>
+      </div>
+      <button
+        class="carousel-control-prev"
+        type="button"
+        data-bs-target="#carouselExampleAutoplaying"
+        data-bs-slide="prev"
+      >
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button
+        class="carousel-control-next"
+        type="button"
+        data-bs-target="#carouselExampleAutoplaying"
+        data-bs-slide="next"
+      >
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+  </div>
+  <!--  <div class="banner__container">
+      <div class="banner__wrap">
+        <div class="banner__info">
+          <h1>Entretenimiento para toda la familia</h1>
+          <p>
+            En MIK generamos cursos con calidad y estamos comprometidos con
+            mejorar la vida de todos nuestros usuarios a través de una manera
+            eficiente y divertida.
+          </p>
+        </div>
+      </div>
+    </div> -->
+  <!-- <div>
+      <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="/static/img/carrusel/imagen_1.jpg" class="d-block w-100" alt="...">
+          </div>
+          <div class="carousel-item">
+            <img src="/static/img/banner2.webp" class="d-block w-100" alt="...">
+          </div>
+          <div class="carousel-item">
+            <img src="/static/img/carrusel/imagen_1.jpg" class="d-block w-100" alt="...">
+          </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+    </div> -->
+  <main>
+    <!-- DESTACADOS -->
+    <!--  <div class="destacado_container animate__animated animate__bounce">
+      <img
+        src="/static/img/destacados.png"
+        alt="imagen_promocion"
+        class="img_promocion"
+      />
+    </div> -->
+    <h1>Cursos de <%= category %></h1>
+    <section class="cards mt-5">
+      <% productsCategory.forEach(product => { %> <% if (product.nuevo) { %>
+      <section class="cards">
+        <article class="card animate__animated animate__fadeIn">
+          <div class="card__container-img">
+            <img
+              class="card__img"
+              src="/static/img/<%=product.imagen%>"
+              alt="Imagen Deportiva"
+            />
+          </div>
+          <div class="card__container-info">
+            <p class="card__label-new">Nuevo</p>
+            <h4 class="card__name"><%= product.nombre %></h4>
+            <p class="card__price">$ <%= product.precio %></p>
+            <a class="card__btn" href="/products/detail/<%=product.id%>"
+              >Ver mas <i class="fa-solid fa-arrow-right"></i
+            ></a>
+          </div>
+        </article>
+      </section>
+      <% } %> <% if (product.destacado) { %>
+      <section class="cards">
+        <article class="card animate__animated animate__fadeIn">
+          <div class="card__container-img">
+            <img
+              class="card__img"
+              src="/static/img/<%=product.imagen%>"
+              alt="Imagen Deportiva"
+            />
+          </div>
+          <div class="card__container-info">
+            <p class="card__label-new">Nuevo</p>
+            <h4 class="card__name"><%= product.nombre %></h4>
+            <p class="card__price">$ <%= product.precio %></p>
+            <a class="card__btn" href="/products/detail/<%=product.id%>"
+              >Ver mas <i class="fa-solid fa-arrow-right"></i
+            ></a>
+          </div>
+        </article>
+      </section>
+      <% } %>
+      <section class="cards">
+        <article class="card animate__animated animate__fadeIn">
+          <div class="card__container-img">
+            <img
+              class="card__img"
+              src="/static/img/<%=product.imagen%>"
+              alt="Imagen Deportiva"
+            />
+          </div>
+          <div class="card__container-info">
+            <!--    <p class="card__label-new">Nuevo</p> -->
+            <h4 class="card__name"><%= product.nombre %></h4>
+            <p class="card__price">$ <%= product.precio %></p>
+            <a class="card__btn" href="/products/detail/<%=product.id%>"
+              >Ver mas <i class="fa-solid fa-arrow-right"></i
+            ></a>
+          </div>
+        </article>
+      </section>
+
+      <% }) %>
+    </section>
+
+    <!-- LO NUEVO -->
+    <!--  <div class="destacado_container animate__animated animate__bounce">
+      <img
+        src="/static/img/lo_nuevo.png"
+        alt="imagen_promocion"
+        class="img_promocion"
+      />
+    </div>
+ -->
+  </main>
+  <%- include('./partials/footer')%>
+</body>

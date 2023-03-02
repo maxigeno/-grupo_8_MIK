@@ -14,26 +14,22 @@ const calculateDiscount = (price, discountPer) => {
 
 const productsControllers = {
   // Root - Show all products
-  //TODO: hacer que funcione con db
   products: async (req, res) => {
     //db
-    let productsDB = await db.Product.findAll();
-    //json
-    let newCourse = products.filter((product) => product.isNew == true);
+    let courses = await db.Product.findAll();
 
-    let inSale = products.filter((product) => product.inSale == true);
+    //json
+    /* let newCourse = products.filter((product) => product.nuevo == true);
+    let inSale = products.filter((product) => product.destacado == true);
     let others = products.filter(
       (product) => product.isNew == false && product.inSale == false
-    );
-    res.render("index", {
-      newCourse,
-      inSale,
-      others,
+    ); */
+    res.render("productIndex", {
+      courses,
       calculateDiscount,
     });
   },
   // Detail
-  //TODO: hacer que funcione con db
   detail: async (req, res) => {
     let id = req.params.id;
     //db
@@ -42,7 +38,78 @@ const productsControllers = {
     //let product = products.find((product) => product.id == id);
     res.render("productDetail", { product });
   },
-  // Create Form
+
+  // Category
+  categoryDeporte: async (req, res) => {
+    //db
+    let courses = await db.Product.findAll();
+
+    let productsCategory = courses.filter(
+      (product) => product.categoria_id == 1
+    );
+
+    res.render("productByCategory", {
+      productsCategory,
+      category: "Deporte",
+    });
+    // Create Form
+  },
+  categoryArte: async (req, res) => {
+    //db
+    let courses = await db.Product.findAll();
+
+    let productsCategory = courses.filter(
+      (product) => product.categoria_id == 2
+    );
+
+    res.render("productByCategory", {
+      productsCategory,
+      category: "Arte",
+    });
+    // Create Form
+  },
+  categoryRecreacion: async (req, res) => {
+    //db
+    let courses = await db.Product.findAll();
+
+    let productsCategory = courses.filter(
+      (product) => product.categoria_id == 3
+    );
+
+    res.render("productByCategory", {
+      productsCategory,
+      category: "Recreación",
+    });
+    // Create Form
+  },
+  categoryEducacion: async (req, res) => {
+    //db
+    let courses = await db.Product.findAll();
+
+    let productsCategory = courses.filter(
+      (product) => product.categoria_id == 5
+    );
+
+    res.render("productByCategory", {
+      productsCategory,
+      category: "Educación",
+    });
+    // Create Form
+  },
+  categoryCocina: async (req, res) => {
+    //db
+    let courses = await db.Product.findAll();
+
+    let productsCategory = courses.filter(
+      (product) => product.categoria_id == 4
+    );
+
+    res.render("productByCategory", {
+      productsCategory,
+      category: "Cocina",
+    });
+    // Create Form
+  },
   create: async (req, res) => {
     //db traigo las categorias
     let categories = await db.Category.findAll();
@@ -88,7 +155,6 @@ const productsControllers = {
       });
 
       res.redirect("/");
-    
     } else {
       //console.log("req.body", req.body)
       res.render("productCreate", {
@@ -103,7 +169,7 @@ const productsControllers = {
     let id = req.params.id;
     // db
     let productToEdit = await db.Product.findByPk(id);
-   // console.log("productToEdit", productToEdit)
+    // console.log("productToEdit", productToEdit)
     let categories = await db.Category.findAll();
     res.render("productEdit", { productToEdit, categories });
   },
@@ -111,7 +177,7 @@ const productsControllers = {
   update: async (req, res) => {
     let id = req.params.id;
     let productToEdit = await db.Product.findByPk(id);
-    console.log("productToEdit", productToEdit)
+    console.log("productToEdit", productToEdit);
     let errors = validationResult(req);
     // JSON
     // let productToEdit = products.find((product) => product.id == id);

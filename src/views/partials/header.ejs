@@ -17,14 +17,14 @@
                        <i class="fa-solid fa-cart-shopping icon"></i>
                        <span>Comprar</span>
                    </a>
-                   <a href="users/login" class="icon__container">
+                   <a href="../../users/login" class="icon__container">
                    <!--  <i class="fa-regular fa-circle-user icon"></i>  -->
                     <figure class="container_avatar">
                         <img src="/static/img/users/<%= locals.userLogged.avatar %>" alt="">
                     </figure>
                     <span> <%= locals.userLogged.email %> </span>
                    </a>
-                   <a href="users/logout" class="icon__container">
+                   <a href="./users/logout" class="icon__container">
                     <i class="fas fa-sign-out-alt" icon"></i> 
                     <span>Cerrar Sesión</span>
                    </a>
@@ -32,11 +32,11 @@
         <% } else  { %>
             <!-- Si no esta autenticado muestro -->
             <div class="icons__container">
-                    <a href="users/cart" class="icon__container">
+                    <a href="../../users/cart" class="icon__container">
                         <i class="fa-solid fa-cart-shopping icon"></i>
                         <span>Comprar</span>
                     </a>
-                    <a href="users/login" class="icon__container">
+                    <a href="../../users/login" class="icon__container">
                     <i class="fa-regular fa-circle-user icon"></i>
                     <!--  <span> Iniciar Sesión </span> -->
                     <span>Iniciar Sesión</span>
@@ -58,20 +58,23 @@
     <nav class="main-nav">
         <ul class="main-menu">
             <li class = "main-menu__item">
-                <a class="main-menu__link" href="#">Deporte</a>
+                <a class="main-menu__link" href="../../products/category/deporte">Deporte</a>
             </li>
             <li class = "main-menu__item">  
-                <a class="main-menu__link" href="#">Arte y DIseño</a>
+                <a class="main-menu__link" href="../../products/category/arte">Arte y DIseño</a>
             </li>
             <li class = "main-menu__item">
-                <a class="main-menu__link" href="#">Educacíon</a>
+                <a class="main-menu__link" href="../../products/category/educacion">Educacíon</a>
             </li>
             <li class = "main-menu__item">
-                <a class="main-menu__link" href="#">Recreación</a>
+                <a class="main-menu__link" href="../../products/category/cocina">Cocina</a>
+            </li>
+            <li class = "main-menu__item">
+                <a class="main-menu__link" href="../../products/category/recreacion">Recreación</a>
            </li>
 
             <li class = "main-menu__item">
-                <a class="main-menu__link"  href="/products">Todos los cursos</a>
+                <a class="main-menu__link"  href="../products">Todos los cursos</a>
             </li>
             
         </ul>

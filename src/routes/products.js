@@ -38,7 +38,13 @@ router.post(
 );
 
 /*** GET ONE PRODUCT ***/
-router.get("/:id/", productsController.detail);
+router.get("/detail/:id/", productsController.detail);
+
+router.get("/category/deporte", productsController.categoryDeporte);
+router.get("/category/arte", productsController.categoryArte);
+router.get("/category/recreacion", productsController.categoryRecreacion);
+router.get("/category/educacion", productsController.categoryEducacion);
+router.get("/category/cocina", productsController.categoryCocina);
 
 /*** EDIT ONE PRODUCT ***/
 router.get("/edit/:id", productsController.edit);
