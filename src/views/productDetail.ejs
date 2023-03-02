@@ -1,10 +1,10 @@
 <%- include('./partials/head')%>
-    <!-- <link rel="stylesheet" href="/static/css/app.css"> -->
+<!-- <link rel="stylesheet" href="/static/css/app.css"> -->
 
-    <body>
-        <%- include('./partials/header')%>
-            <br><br>
-           <!--  <main>
+<body>
+  <%- include('./partials/header')%>
+  <br /><br />
+  <!--  <main>
                 <div class="details">
                     <article class="product_details">
                         <div class="product_img">
@@ -39,57 +39,77 @@
                 </div>
             </main> -->
 
-            <div class="container mt-5">
+  <div class="container mt-5">
+    <article
+      class="card border-0 rounded-3 overflow-hidden flex-md-row animate__animated animate__fadeIn"
+    >
+      <div class="container_img flex-md-shrink-1 flex-md-grow-1 w-100">
+        <picture>
+          <img
+            class="card-img-top"
+            src="/static/img/<%=product.imagen%>"
+            alt="Imagen Deportiva"
+          />
+        </picture>
+      </div>
+      <div
+        class="container_info flex-md-shrink-1 flex-md-grow-1 w-100 d-flex flex-column justify-content-center"
+      >
+        <div class="card-body mt-2">
+          <h1 class="text-capitalize text-center fw-bolder">
+            <%=product.nombre%>
+          </h1>
 
-                <article class="card border-0 rounded-3 overflow-hidden flex-md-row animate__animated animate__fadeIn">
-                    <div class="container_img flex-md-shrink-1 flex-md-grow-1 w-100">
-                        <picture>
-                            <img class="card-img-top" src="/static/img/<%=product.imagen%>" alt="Imagen Deportiva">
-                        </picture>
-                    </div>
-                    <div class="container_info flex-md-shrink-1 flex-md-grow-1 w-100 d-flex flex-column justify-content-center " >
-                        <div class="card-body mt-2">
-                            <h1 class="text-capitalize  text-center fw-bolder"><%=product.nombre%></h1>
-
-                            <div class="row my-3">
-                                <div class="col-12">
-                                    <h5>Descripción</h5>
-                                    <p class="card-text "><%=product.descripcion%></p>
-                                </div>
-                            </div>
-                            <div class="row text-end mx-2">
-                                <div class="col-12 ">
-                                    <p class="card-text fw-bolder h4">$ <%=product.precio%></p>
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="col-12 my-3 w-100 ">
-                                   <a class="detele-button " href="">Agregar al Carrito</a>
-                                </div>
-                            </div>
-                            <div class="row mt-3 text-end">
-                                <div class="col-2">
-                                    <a href="/products/edit/<%= product.id %>" class="edit-delete-button">EDITAR</a>
-                                </div>
-                                <div class="col-2">
-                                    <form action="/products/delete/<%= product.id %>?_method=DELETE" method="POST"
-                                        style="display: inline-flex">
-                                        <button type="submit" class="edit-delete-button">ELIMINAR</button>
-                                    </form>
-                                </div>
-                                    
-                            </div>
-                            <div class="row mt-3 text-start">
-                               <div class="col-12">
-                                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nobis distinctio commodi obcaecati laborum rerum voluptatem.</p>
-                               </div>
-                                    
-                            </div>
-                        </div>
-
-                    </div>
-                </article>
-           
-
+          <div class="row my-3">
+            <div class="col-12">
+              <h5>Descripción</h5>
+              <p class="card-text"><%=product.descripcion%></p>
             </div>
-            <%- include('./partials/footer')%>
+          </div>
+          <div class="row text-end mx-2">
+            <div class="col-12">
+              <p class="card-text fw-bolder h4">$ <%=product.precio%></p>
+            </div>
+          </div>
+          <div class="row mt-5">
+            <div class="col-12 my-3 w-100">
+              <a class="detele-button" href="">Agregar al Carrito</a>
+            </div>
+          </div>
+
+          <% if (locals.isLogged) { %>
+          <div class="row mt-3 text-end">
+            <div class="col-2">
+              <a
+                href="/products/edit/<%= product.id %>"
+                class="edit-delete-button"
+                >EDITAR</a
+              >
+            </div>
+            <div class="col-2">
+              <form
+                action="/products/delete/<%= product.id %>?_method=DELETE"
+                method="POST"
+                style="display: inline-flex"
+              >
+                <button type="submit" class="edit-delete-button">
+                  ELIMINAR
+                </button>
+              </form>
+            </div>
+          </div>
+          <% } %>
+          <!--  <div class="row mt-3 text-start">
+            <div class="col-12">
+              <p>
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nobis
+                distinctio commodi obcaecati laborum rerum voluptatem.
+              </p>
+            </div>
+          </div> -->
+        </div>
+      </div>
+    </article>
+  </div>
+  <%- include('./partials/footer')%>
+</body>

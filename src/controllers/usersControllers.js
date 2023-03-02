@@ -76,13 +76,12 @@ const usersControllers = {
         image = "default-image.png";
       }
       //busco si el usuario ya esta registrado
-     // let userInDB = USer.findByField("email", req.body.email);
+      // let userInDB = USer.findByField("email", req.body.email);
       let userInDB = await db.User.findOne({
         where: {
           email: req.body.email,
         },
       });
-
 
       //si el usuario ya esta registrado, renderizo el form con el error y los datos que ya habia ingresado el usuario
       if (userInDB) {
@@ -104,7 +103,7 @@ const usersControllers = {
         password: bcrypt.hashSync(req.body.password, 10),
         avatar: image,
       });
-      res.redirect("users/login");
+      res.redirect("/");
       //si hay errores, renderizo el form con los errores y los datos que ya habia ingresado el usuario
     } else {
       // console.log(errors.mapped());

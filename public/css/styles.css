@@ -85,7 +85,22 @@ header .icons__container{
     font-size: 24px;
     color: #303F9F;
 }
+.container_avatar{
+   /*  display: flex; */
+    margin: 0;
+    border-radius:50%; 
+    width:100%; 
+    height: auto; 
+    max-width:40px; 
+    max-height: 40px; 
+    background-color: transparent;
+}
+.container_avatar img{
+    width:100%; 
+    height: auto;
+}
 
+    
 header .search__container{
     position: relative;
     display: flex;
@@ -553,7 +568,7 @@ select{
     padding: 30px;
     font-family: 'calibri';
     color: gray;
-    border: solid 1px #303F9F;
+   /*  border: solid 1px #303F9F; */
     margin:auto;
     margin-top: 20px;
 }
@@ -564,9 +579,9 @@ select{
 }
 
 .controls{
-    width: 90%;
+    width: 100%;
     background-color: white;
-    padding: 10px;
+  /*   padding: 10px; */
     border-radius: 4px;
     margin-bottom: 16px;
     border: solid 1px #FF4081;
@@ -829,6 +844,13 @@ a{
         transform: scale(1.1);
         
     }
+    .icons__container {
+        display: flex;
+      /*   flex-direction: column; */
+        justify-content: center;
+        align-items: center;
+        margin-right: 10px;
+    }
     
     .icons__container a{
         display: flex;
@@ -838,7 +860,9 @@ a{
         margin-right: 10px;
     }
     .icons__container span{
-        display: inline;
+        display: flex;
+     /*    width: 100%; */
+     /*    flex-direction: column; */
        font-size: 14px;
        margin: 5px 0;
        color: #303F9F;

@@ -18,7 +18,10 @@
                        <span>Comprar</span>
                    </a>
                    <a href="users/login" class="icon__container">
-                    <i class="fa-regular fa-circle-user icon"></i> 
+                   <!--  <i class="fa-regular fa-circle-user icon"></i>  -->
+                    <figure class="container_avatar">
+                        <img src="/static/img/users/<%= locals.userLogged.avatar %>" alt="">
+                    </figure>
                     <span> <%= locals.userLogged.email %> </span>
                    </a>
                    <a href="users/logout" class="icon__container">

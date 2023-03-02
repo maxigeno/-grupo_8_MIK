@@ -1,0 +1,26 @@
+1 - home responsive - header - footer - card
+
+
+1- mostrar registro validaciones
+2- registro - no te deja crear dos usuarios con el mismo email
+3- registro - pasword  + 8  u alfanumerico.
+
+4- tanto registro como crear si no pones img se pone una por defecto
+-tocando el icono te redidije al home
+4- una vex creada la cuenta no se puede ingresar al login ni register.  
+
+cokies - para mantener la sesion abierta
+sesion - para mantener los datos del usuario
+
+CARDS - HOME
+ 1- Diseño responsive.
+ 2- Descuento que se calculan
+
+2- dependiendo si esta como nuevo o destacada 
+aparece en el home
+
+
+CREAR pRODUCTO
+
+
+ 
