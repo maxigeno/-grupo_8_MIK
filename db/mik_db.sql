@@ -76,7 +76,7 @@ INSERT INTO `productos` ( `nombre`, `descripcion`, `descripcion_corta`, `precio`
 ( 'Guitarra | GENERAL', 'Si te gusta tocar guitarra, compra nuestro curso e inicia tu aprendizaje en este instrumento musical. Aprenderás técnicas básicas como esclas, acorders, ritmos, gramática musical, entre otros para que logres interpretar tus primeras canciones. ¡Incríbete ahora!', '' , 14000, 'guitarra.webp', 0, 1,  20, 2),
 ( 'Programación | NIÑOS', '¿Te gusta jugar futbol? Mejora tus habilidades y aprende sobre las tecnicas en este deporte inscribiendote a nuestro curso de futbol dirigido a niños con el objetivo de acompañarte en todo el proceso de crecimiento dentro de este deporte. Aprenderas diferentes tecnicas y mejoraras tus habilidades de la mano de nuestros profesionales.', '' , 6800, 'programacion.webp', 0, 1,  50, 5),
 ('Frances | ADULTO', '¡Es momento de aprender idiomas, de abrir tu conocimiento en nuevas lenguas y poder ir a cualquier pais y poder hablar con tranquilidad! Tenemos todo tipo de niveles! Principiantes, Intermedio, Experimentado', '', 10700, 'frances.jpg', 0, 1, 45, 5),
-('Tenis | NIÑOS', 'Es momento que tu hijo/a aprenda un gran deporte como el tenis, donde se practica y se entrena con mucha responsabilidad.', '', 8522, 'producto-sin-foto.webp', 0, 1, 25, 1);
+('Tenis | NIÑOS', 'Es momento que tu hijo/a aprenda un gran deporte como el tenis, donde se practica y se entrena con mucha responsabilidad.', '', 8522, 'producto-sin-foto.webp', 0, 1, 25, 1),
 
 /* VARIADOS*/
 ( 'Locución | ADULTOS', 'Aqui te podes desenvolver de la mejor manera, en este curso, ¿Con qué? Con la Locucion, aprende a relatar, hablar y poder trasnmitir a travez de tu voz.', '' , 6678, 'producto-sin-foto.webp', 0, 0,  0, 4),
@@ -85,15 +85,15 @@ INSERT INTO `productos` ( `nombre`, `descripcion`, `descripcion_corta`, `precio`
 ( 'Italiano | NIÑOS', 'Tu hijo le gusta correr, no sabes como pararlo, NO LO HAGAS! Muestrale estos videos de este curo el cual le enseñera tecnicas divertidas para empezar el atletismo de una manera dinamica y diferente.', '' , 9970, 'producto-sin-foto.webp', 0, 0,  0, 1);
 
 
-
-
 /* insert usuario */
 INSERT INTO `usuarios` ( `nombre`, `apellido`, `email`, `password`, `rol`) VALUES
-( 'maximiliano', 'genolet', 'maxistafe008@gmail.com', '12345678a', 'admin');
+( 'maximiliano', 'genolet', 'maxi@gmail.com', '12345678a', 'admin'),
+( 'ivan', 'soria', 'ivan@gmail.com', '12345678a', 'admin'),
+( 'martin', 'roldan', 'martin@gmail.com', '12345678a', 'user');
 
 /* insert  pedido_detalle */
-INSERT INTO `pedido_detalle` ( `cantidad`, `producto_id`, `usuario_id`, `fecha`, `estado`) VALUES
-( 1, 1, 1, '2022-02-01 00:00:00', 'pendiente');
+/* INSERT INTO `pedido_detalle` ( `cantidad`, `producto_id`, `usuario_id`, `fecha`, `estado`) VALUES
+( 1, 1, 1, '2022-02-01 00:00:00', 'pendiente'); */
 
 
 
