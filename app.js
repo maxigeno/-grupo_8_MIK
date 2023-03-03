@@ -4,8 +4,9 @@ const path = require("path");
 const session = require("express-session");
 const cookies = require("cookie-parser");
 const app = express();
+const cors = require("cors");
 
-const PORT = process.env.PORT || 3030;
+const PORT = process.env.PORT || 3001;
 const userLogguedMiddleWare = require("./src/middlewares/userLogguedMiddleWare");
 
 //configuro lo static para express
@@ -28,6 +29,8 @@ app.use(
 );
 //middleware para saber si hay un usuario logueado
 app.use(userLogguedMiddleWare);
+//
+app.use(cors());
 
 //Configuro motor de plantilla
 app.set("view engine", "ejs");
