@@ -4,6 +4,7 @@
 
 *Dejar las tareas para último momento
 *No avisar nada sii hacen algo o no
+*Borrarse del curso sin avisar
 
 ## Comenzar a hacer
 
@@ -17,6 +18,7 @@
 *Preguntar ante cualquier duda sobre el proyecto y sus respectivas tareas a los compañeros del equipo
 *Realizar mas consultas a los profes por dudas del sprint
 *Comunicacion sin verguenza
+*Lectura comprensiva de los srints
 
 ## Continuar haciendo
 
@@ -27,6 +29,6 @@
 *Mantener la comunicacion de manera constante en caso de cambios 
 *Ayudar a cada compañero a poder lograr el objetivo de su tarea en el sprint en caso de que no logre hacerlo.
 *Resolver los problemas con la mejor actitud y seguir para adelante
-
+*Resolviendo los problemas de manera efectiva 
 
 
