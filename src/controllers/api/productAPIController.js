@@ -27,13 +27,29 @@ const productAPIController = {
 
         res.status(200).json({
           total_productos: data.length,
-          categorias: {
-            deporte: deporte.length,
-            arte: arte.length,
-            cocina: cocina.length,
-            reacreacion: reacreacion.length,
-            educacion: educacion.length,
-          },
+          categorias: [
+            {
+              nombre: "deportes",
+              cantidad: deporte.length,
+            },
+            {
+              nombre: "arte",
+              cantidad: arte.length,
+            },
+            {
+              nombre: "cocina",
+              cantidad: cocina.length,
+            },
+            {
+              nombre: "reacreación",
+              cantidad: reacreacion.length,
+            },
+            {
+              nombre: "educación",
+              cantidad: educacion.length,
+            },
+          ],
+
           data,
           status: 200,
         });
